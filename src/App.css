@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Bright South";
+  src: url("./assets/fonts/FontsFree-Net-Trend-Sans-W00-Five.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("./assets/fonts/proxima-nova/Mark\ Simonson\ \ Proxima\ Nova\ Regular.otf")
+    format("truetype");
+}
+
+body {
+  background-color: #030000;
+  font-family: "Proxima Nova", sans-serif;
+}
