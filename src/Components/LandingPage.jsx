@@ -91,6 +91,29 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+
+      <div className=" grid gap-[30px] items-center place-items-center">
+        <p className=" font-bright text-[30px] lg:text-[70px] font-[700] text-[#FCCE06]">
+          ABOUT
+        </p>
+        <p className=" text-justify text-[18px] lg:text-[30px] font-[600] font-proxima">
+          The <span className=" text-[#FCCE06]">$WEEGLE</span> memecoin was born
+          out of the imperative need to showcase the resilient nature of
+          <span className=" text-[#FCCE06]"> Binance</span>. A case that can be
+          likened to “a <span className=" text-[#FCCE06]">cat</span> with nine
+          (9) lives” Its no longer news that, no matter what is thrown at
+          Binance or her founder, the entity can only ‘Weeble Wobble , But They
+          Won’t Fall Down’
+        </p>
+        <p className="text-justify text-[18px] lg:text-[30px] font-[600] font-proxima">
+          {" "}
+          Extending beyond the <span className="text-[#FCCE06]">Binance </span>
+          story, <span className="text-[#FCCE06]">$WEEGLE</span> is now a
+          representative of the community&apos;s collective efforts to
+          supporting <span className=" text-[#FCCE06]">Binance </span> to keep
+          leading the Charge.
+        </p>
+      </div>
       {isVisible && (
         <button
           onClick={scrollToTop}
