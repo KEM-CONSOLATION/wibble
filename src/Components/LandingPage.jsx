@@ -5,6 +5,16 @@ import "aos/dist/aos.css";
 import Video from "../assets/fonts/VideoLogo.mp4";
 import BuyButton from "../assets/Buy_Weegle_Button.svg";
 import checkIcon from "../assets/checkIcon.svg";
+import DexScreener from "../assets/DexScreener.svg";
+import rocket from "../assets/ion_rocket-sharp.svg";
+import Coingeco from "../assets/Coingeco.svg";
+import CoincapMarket from "../assets/CoincapMarket.svg";
+import XIcon from "../assets/XIcon.svg";
+import Telegram from "../assets/Telegram.svg";
+import icon1 from "../assets/icon1.svg";
+import icon2 from "../assets/icon2.svg";
+import { Typewriter } from "react-simple-typewriter";
+// import { TypeWriter } from "react-typewriter";
 const LandingPage = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -31,14 +41,13 @@ const LandingPage = () => {
     };
   }, []);
   return (
-    <div className="max-w-6xl mx-auto mt-[10px] relative text-white">
-      <div className=" grid items-center lg:flex lg:items-start gap-[10px]">
-        <div className=" max-w-[100px] mx-auto lg:max-w-[107px]">
+    <div className=" max-w-[1920px] 2xl:mx-auto lg:mx-[40px] mx-[10px] mt-[10px] relative text-white">
+      <div className=" grid items-center lg:flex lg:items-start lg:justify-center place-items-center  gap-[10px]">
+        <div className=" max-w-[100px] lg:max-w-[107px]">
           <video
             src={Video}
             className="w-full h-auto max-w-full"
             autoPlay
-            muted
             loop
             data-aos="fade-up"
           ></video>
@@ -64,20 +73,39 @@ const LandingPage = () => {
           </p>
 
           <div className=" font-proxima font-[700] text-[18px] lg:text-[30px] text-[#FCCE06] grid grid-cols-2 md:flex items-center justify-center gap-[10px] lg:gap-[40px]">
-            <p>HOME </p>
-            <p> TOKENOMICS </p>
-            <p> HOW TO BUY </p>
-            <p>WEEGLES</p>
+            <p className=" hover:text-white">
+              <a href="#about">ABOUT</a>{" "}
+            </p>
+            <p className=" hover:text-white">
+              {" "}
+              <a href="#tokenomics">TOKENOMICS</a>{" "}
+            </p>
+            <p className=" hover:text-white">
+              {" "}
+              <a href="#buy">HOW TO BUY</a>{" "}
+            </p>
+            <p className=" hover:text-white">
+              <a href="#weegles">WEEGLES</a>
+            </p>
           </div>
-          <div className=" text-[#FCCE06]">
+          <div className=" text-[#FCCE06] " data-aos="fade-up">
             <p
-              className="font-bright text-[#FCCE06] font-[700] text-[50px] md:text-[50px] lg:text-[200px]"
+              className="font-bright text-[#FCCE06] font-[700] text-[50px]
+              md:text-[50px] lg:text-[180px]"
               style={{
                 textShadow:
                   "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
               }}
             >
-              WEEGLE
+              <Typewriter
+                words={["WEEGLE"]}
+                loop={0}
+                cursor
+                cursorStyle="_"
+                typeSpeed={70}
+                deleteSpeed={300}
+                delaySpeed={1000}
+              />
             </p>
           </div>
 
@@ -94,7 +122,11 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className=" grid gap-[30px] items-center place-items-center">
+      <div
+        id="about"
+        className=" grid gap-[30px] items-center place-items-center"
+        data-aos="fade-up"
+      >
         <p className=" font-bright text-[30px] lg:text-[70px] font-[700] text-[#FCCE06]">
           ABOUT
         </p>
@@ -122,7 +154,7 @@ const LandingPage = () => {
       </div>
 
       <div className=" text-center">
-        <div className=" py-[20px]">
+        <div className=" py-[20px]" id="weegles">
           <p
             className="font-bright text-[#FCCE06] font-[700] text-[30px] md:text-[50px] lg:text-[70px]"
             style={{
@@ -161,7 +193,7 @@ const LandingPage = () => {
             <img src={BuyButton} alt="" />
           </div>
 
-          <div className=" py-[20px]">
+          <div className=" py-[20px]" id="buy">
             <p
               className="font-bright animate-bounce text-[#FCCE06] font-[700] text-[30px] md:text-[50px] lg:text-[70px]"
               style={{
@@ -312,6 +344,144 @@ const LandingPage = () => {
                 Weegle to your wallet. In MetaMask or Trust Wallet, go to
                 &apos;Add Token,&apos; select &apos;Custom Token,&apos; and
                 input the Weegle contract address.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="   ">
+          <div className=" py-[40px] flex items-center justify-center">
+            <img src={BuyButton} alt="" />
+          </div>
+
+          <div className=" py-[20px]" id="tokenomics">
+            <p
+              className="font-bright animate-bounce text-[#FCCE06] font-[700] text-[30px] md:text-[50px] lg:text-[70px]"
+              style={{
+                textShadow:
+                  "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
+              }}
+            >
+              TOKENOMICS
+            </p>
+          </div>
+
+          <div className=" font-proxima font-[500] grid md:grid-cols-2 items-start place-items-center gap-[10px] text-left lg:grid-cols-3">
+            <div className="  ">
+              <div className=" flex items-center gap-[10px] ">
+                <img src={icon1} alt="" className=" w-[30px] h-[30px]" />
+                <p
+                  className="font-bright text-[#FCCE06] font-[700] text-[20px] 2xl:text-[28px]"
+                  style={{
+                    textShadow:
+                      "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
+                  }}
+                >
+                  CONFIGURATION
+                </p>
+              </div>
+              <div className="py-[10px] text-[14px] 2xl:text-[16px]">
+                <p>870,585,147 $WEEGLE</p>
+                <p>Stealth Launch</p>
+                <p>Zero Allocations </p>
+                <p> Zero Presale </p>
+                <p>Zero Taxes </p>
+                <p>Auto TBM</p>
+              </div>
+            </div>
+            <div className=" ">
+              <div className=" flex items-center gap-[10px]">
+                <img src={rocket} alt="" className=" w-[30px] h-[30px]" />
+                <p
+                  className="font-bright text-[#FCCE06] font-[700] text-[20px]  2xl:text-[28px]"
+                  style={{
+                    textShadow:
+                      "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
+                  }}
+                >
+                  LAUNCHCANICS
+                </p>
+              </div>
+              <div className="py-[10px] text-[14px] 2xl:text-[16px]">
+                <p>Max Supply: 4,690,000,000</p>
+                <p>Total Supply: 4,690,000,000</p>
+                <p>Circulating at Launch: 4,690,000,000 </p>
+                <p> Contract Revoked/Renounced </p>
+                <p>Liquidity Locked for 4.6 Years</p>
+                <p>Anti Whale: Less that 1% Post-launch</p>
+              </div>
+            </div>
+            <div className=" ">
+              <div className=" flex items-center gap-[10px]">
+                <img src={icon2} alt="" className=" w-[30px] h-[30px]" />
+                <p
+                  className="font-bright text-[#FCCE06] font-[700] text-[20px]  2xl:text-[28px]"
+                  style={{
+                    textShadow:
+                      "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
+                  }}
+                >
+                  TOKEN BURN MECHS (TBM)
+                </p>
+              </div>
+              <div className=" py-[10px]">
+                <p className=" ">
+                  Token Burn Mechanism (TBM): Weegle to Burn Burn Rate: 1% after
+                  every 10,000,000,000 Wiggles until Deployment wallet it Empty
+                </p>
+                <p className=" pt-[10px]">
+                  The Token Burn Mechanics is designed to give the token holders
+                  the power to decide the value of WEEGLE.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="">
+          <div className=" py-[40px] flex items-center justify-center">
+            <img src={BuyButton} alt="" />
+          </div>
+
+          <div className=" flex items-center justify-between md:justify-center md:gap-[60px]">
+            <img src={XIcon} alt="" className=" w-[40px] h-[40px]" />
+            <img src={Telegram} alt="" className=" w-[40px] h-[40px]" />
+            <img src={CoincapMarket} alt="" className=" w-[40px] h-[40px]" />
+            <img src={Coingeco} alt="" className=" w-[40px] h-[40px]" />
+            <img src={DexScreener} alt="" className=" w-[40px] h-[40px]" />
+          </div>
+        </div>
+
+        <div className=" py-[40px] max-w-6xl mx-auto">
+          <div className="">
+            <p
+              className="font-bright text-[#FCCE06] font-[700] text-[18px] md:text-[25px] lg:text-[35px] py-[10px]"
+              style={{
+                textShadow:
+                  "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
+              }}
+            >
+              DISCLAIMER
+            </p>
+            <div className="flex items-start  gap-[20px]">
+              <img src={checkIcon} alt="Check icon" className="" />
+              <p className=" text-justify text-[16px] lg:text-[20px]">
+                <span className="text-[#FFC700]"> $WEEGLE </span>is not part of
+                the <span className="text-[#FFC700]">Binance</span> website or
+                <span className="text-[#FFC700]"> Binance</span> Inc. This site
+                is NOT endorsed by{" "}
+                <span className="text-[#FFC700]">Binance</span> in any way.{" "}
+                <span className="text-[#FFC700]">Binance</span> is a trademark
+                of Binance Inc.
+              </p>
+            </div>
+
+            <div className="flex items-start  py-[10px] gap-[20px]">
+              <img src={checkIcon} alt="Check icon" className="" />
+              <p className=" text-justify text-[16px] lg:text-[20px]">
+                <span className="text-[#FFC700]"> $WEEGLE </span> is a community
+                Crypto coin with no intrinsic value or promise of financial
+                return. There is not formal team or roadmap
               </p>
             </div>
           </div>
