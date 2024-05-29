@@ -14,7 +14,6 @@ import Telegram from "../assets/Telegram.svg";
 import icon1 from "../assets/icon1.svg";
 import icon2 from "../assets/icon2.svg";
 import { Typewriter } from "react-simple-typewriter";
-// import { TypeWriter } from "react-typewriter";
 const LandingPage = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -294,8 +293,9 @@ const LandingPage = () => {
                 in your browser.
               </p>
               <p className=" pt-[10px]">
-                - Connect Your Wallet: Click 'Connect Wallet' and select
-                MetaMask or Trust Wallet to link your wallet to PancakeSwap.
+                - Connect Your Wallet: Click &apos;Connect Wallet&apos; and
+                select MetaMask or Trust Wallet to link your wallet to
+                PancakeSwap.
               </p>
             </div>
             <div className=" font-proxima max-w-[444px] text-[14px] lg:text-[16px] font-[500]">
