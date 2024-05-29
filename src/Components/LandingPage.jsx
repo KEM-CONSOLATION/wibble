@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-// import Video from "../assets/fonts/VideoLogo.mp4";
+import Video from "../assets/fonts/VideoLogo.mp4";
 import BuyButton from "../assets/Buy_Weegle_Button.svg";
 import checkIcon from "../assets/checkIcon.svg";
 import DexScreener from "../assets/DexScreener.svg";
@@ -43,13 +43,13 @@ const LandingPage = () => {
     <div className=" max-w-[1920px] 2xl:mx-auto lg:mx-[40px] mx-[10px] mt-[10px] relative text-white">
       <div className=" grid items-center lg:flex lg:items-start lg:justify-center place-items-center  gap-[10px]">
         <div className=" max-w-[100px] lg:max-w-[107px]">
-          {/* <video
+          <video
             src={Video}
             className="w-full h-auto max-w-full"
             autoPlay
             loop
             data-aos="fade-up"
-          ></video> */}
+          ></video>
         </div>
         <div className=" flex flex-col items-center">
           <p className="  flex items-center gap-[10px] text-white capitalize font-[700] text-[14px] sm:text-[20px] md:text-[30px] font-bright lg:text-[42px]">
@@ -58,14 +58,14 @@ const LandingPage = () => {
             <span className=" flex items-center gap-[10px]">
               c{"  "}
               <div className=" max-w-[20px] lg:max-w-[30px]">
-                {/* <video
+                <video
                   src={Video}
                   className="w-full h-auto max-w-full"
                   autoPlay
                   muted
                   loop
                   data-aos="fade-up"
-                ></video> */}
+                ></video>
               </div>
             </span>
             t
@@ -109,14 +109,14 @@ const LandingPage = () => {
           </div>
 
           <div className=" max-w-[638px]">
-            {/* <video
+            <video
               src={Video}
               className="w-full h-auto max-w-full"
               autoPlay
               muted
               loop
               data-aos="fade-up"
-            ></video> */}
+            ></video>
           </div>
         </div>
       </div>
