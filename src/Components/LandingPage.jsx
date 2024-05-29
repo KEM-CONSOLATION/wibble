@@ -72,7 +72,7 @@ const LandingPage = () => {
             t
           </p>
 
-          <div className=" font-proxima font-[700] text-[18px] lg:text-[30px] text-[#FCCE06] grid grid-cols-2 md:flex items-center justify-center gap-[10px] lg:gap-[40px]">
+          <div className=" mt-[10px] md:mt-0 font-proxima font-[700] text-[18px] lg:text-[30px] text-[#FCCE06] grid grid-cols-2 md:flex items-center justify-center gap-[10px] lg:gap-[40px]">
             <p className=" hover:text-white">
               <a href="#about">ABOUT</a>{" "}
             </p>
@@ -124,7 +124,7 @@ const LandingPage = () => {
 
       <div
         id="about"
-        className=" grid gap-[30px] items-center place-items-center"
+        className=" mx-[10px]  md:mx-0  grid gap-[30px] items-center place-items-center"
         data-aos="fade-up"
       >
         <p className=" font-bright text-[30px] lg:text-[70px] font-[700] text-[#FCCE06]">
@@ -167,7 +167,7 @@ const LandingPage = () => {
         </div>
 
         <div className="max-w-[935px] mx-auto my-[20px]">
-          <div className="grid gap-[20px] font-proxima text-[18px] md:text-[35px] font-[600]">
+          <div className="grid gap-[20px] font-proxima text-[16px] md:text-[35px] font-[600]">
             <div className="flex items-start gap-[20px]">
               <img src={checkIcon} alt="Check icon" className="" />
               <p className=" text-justify">
@@ -205,7 +205,7 @@ const LandingPage = () => {
             </p>
           </div>
 
-          <div className=" grid md:grid-cols-2 items-start place-items-center gap-[40px] text-left lg:grid-cols-3">
+          <div className=" grid md:grid-cols-2 mx-[10px] md:mx-0 items-start place-items-center gap-[40px] text-left lg:grid-cols-3">
             <div className=" font-proxima max-w-[444px] text-[14px] lg:text-[16px] font-[500]">
               <p
                 className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]"
@@ -367,7 +367,7 @@ const LandingPage = () => {
             </p>
           </div>
 
-          <div className=" font-proxima font-[500] grid md:grid-cols-2 items-start place-items-center gap-[10px] text-left lg:grid-cols-3">
+          <div className=" font-proxima font-[500] grid mx-[10px] md:mx-0 md:grid-cols-2 items-start md:place-items-center gap-[10px] text-left lg:grid-cols-3">
             <div className="  ">
               <div className=" flex items-center gap-[10px] ">
                 <img src={icon1} alt="" className=" w-[30px] h-[30px]" />
