@@ -47,6 +47,7 @@ const LandingPage = () => {
             src={Video}
             className="w-full h-auto max-w-full"
             autoPlay
+            muted
             loop
             data-aos="fade-up"
           ></video>
@@ -113,7 +114,7 @@ const LandingPage = () => {
               src={Video}
               className="w-full h-auto max-w-full"
               autoPlay
-              muted
+              // muted
               loop
               data-aos="fade-up"
             ></video>
