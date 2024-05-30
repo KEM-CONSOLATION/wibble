@@ -42,8 +42,36 @@ const LandingPage = () => {
   }, []);
   return (
     <div className=" max-w-[1920px] 2xl:mx-auto lg:mx-[40px] mx-[10px] mt-[10px] relative text-white">
-      <div className=" grid items-center lg:flex lg:items-start lg:justify-center place-items-center  gap-[10px]">
-        <div className=" max-w-[100px] lg:max-w-[107px]">
+      <div className=" flex items-center justify-between">
+        <div className=" flex items-center justify-start md:hidden">
+          <div className=" lg:hidden block max-w-[40px]">
+            <img
+              src={Logo}
+              alt=""
+              data-aos="fade-up"
+              className="w-full h-auto max-w-full"
+            />
+          </div>
+          <div className="    ">
+            <p className=" lg:hidden  flex items-center gap-[10px] text-white capitalize font-[700] text-[20px] sm:text-[20px] md:text-[30px] font-bright lg:text-[42px]">
+              WeegleCat
+            </p>
+          </div>
+        </div>
+
+        <div className=" md:hidden">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className={`text-white text-3xl focus:outline-none ${
+              !menuOpen ? "animate-none" : "animate-none"
+            }`}
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+      <div className=" grid items-center md:flex md:items-start md:justify-center place-items-center  gap-[10px]">
+        <div className=" hidden md:block lg:max-w-[107px]">
           <img
             src={Logo}
             alt=""
@@ -52,23 +80,23 @@ const LandingPage = () => {
           />
         </div>
         <div className=" flex flex-col items-center">
-          <p className="  flex items-center gap-[10px] text-white capitalize font-[700] text-[14px] sm:text-[20px] md:text-[30px] font-bright lg:text-[42px]">
-            THE <span className=" text-[#FCCE06]"> {""}BINANCE</span> WIBBLE
-            WOBBLE CAT
+          <p className=" mt-[10px] md:mt-0 flex items-center gap-[10px] text-white capitalize font-[700] text-[16px] md:text-[30px] font-bright lg:text-[50px]">
+            THE{" "}
+            <span
+              className=" text-[#FCCE06]"
+              style={{
+                textShadow:
+                  "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
+              }}
+            >
+              {" "}
+              {""}BINANCE
+            </span>{" "}
+            WIBBLE WOBBLE CAT
           </p>
 
-          <div className="md:hidden">
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className={`text-white text-3xl focus:outline-none ${
-                !menuOpen ? "animate-bounce" : "animate-none"
-              }`}
-            >
-              ☰
-            </button>
-          </div>
           <div
-            className={`${menuOpen ? "block" : "hidden"} lg:block mt-2 lg:mt-0`}
+            className={`${menuOpen ? "block" : "hidden"} md:block mt-2 lg:mt-0`}
           >
             <div className="mt-[10px] md:mt-0 font-proxima font-[700] text-[18px] lg:text-[30px] text-[#FCCE06] grid text-center md:flex items-center justify-center gap-[10px] lg:gap-[40px]">
               <p className=" hover:text-white">
@@ -108,7 +136,7 @@ const LandingPage = () => {
             </p>
           </div>
 
-          <div className=" max-w-[638px]">
+          <div className=" max-w-[638px] ">
             <video
               src={Video}
               className="w-full h-auto max-w-full"
