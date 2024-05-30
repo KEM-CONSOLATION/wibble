@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Logo from "../assets/catLogo.png";
 import Video from "../assets/fonts/VideoLogo.mp4";
 import BuyButton from "../assets/Buy_Weegle_Button.svg";
 import checkIcon from "../assets/checkIcon.svg";
@@ -16,7 +17,7 @@ import icon2 from "../assets/icon2.svg";
 import { Typewriter } from "react-simple-typewriter";
 const LandingPage = () => {
   const [isVisible, setIsVisible] = useState(false);
-
+  const [menuOpen, setMenuOpen] = useState(false);
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -43,50 +44,46 @@ const LandingPage = () => {
     <div className=" max-w-[1920px] 2xl:mx-auto lg:mx-[40px] mx-[10px] mt-[10px] relative text-white">
       <div className=" grid items-center lg:flex lg:items-start lg:justify-center place-items-center  gap-[10px]">
         <div className=" max-w-[100px] lg:max-w-[107px]">
-          <video
-            src={Video}
-            className="w-full h-auto max-w-full"
-            autoPlay
-            muted
-            loop
+          <img
+            src={Logo}
+            alt=""
             data-aos="fade-up"
-          ></video>
+            className="w-full h-auto max-w-full"
+          />
         </div>
         <div className=" flex flex-col items-center">
           <p className="  flex items-center gap-[10px] text-white capitalize font-[700] text-[14px] sm:text-[20px] md:text-[30px] font-bright lg:text-[42px]">
             THE <span className=" text-[#FCCE06]"> {""}BINANCE</span> WIBBLE
-            WOBBLE
-            <span className=" flex items-center gap-[10px]">
-              c{"  "}
-              <div className=" max-w-[20px] lg:max-w-[30px]">
-                <video
-                  src={Video}
-                  className="w-full h-auto max-w-full"
-                  autoPlay
-                  muted
-                  loop
-                  data-aos="fade-up"
-                ></video>
-              </div>
-            </span>
-            t
+            WOBBLE CAT
           </p>
 
-          <div className=" mt-[10px] md:mt-0 font-proxima font-[700] text-[18px] lg:text-[30px] text-[#FCCE06] grid grid-cols-2 md:flex items-center justify-center gap-[10px] lg:gap-[40px]">
-            <p className=" hover:text-white">
-              <a href="#about">ABOUT</a>{" "}
-            </p>
-            <p className=" hover:text-white">
-              {" "}
-              <a href="#tokenomics">TOKENOMICS</a>{" "}
-            </p>
-            <p className=" hover:text-white">
-              {" "}
-              <a href="#buy">HOW TO BUY</a>{" "}
-            </p>
-            <p className=" hover:text-white">
-              <a href="#weegles">WEEGLES</a>
-            </p>
+          <div className="md:hidden">
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="text-white text-3xl focus:outline-none"
+            >
+              ☰
+            </button>
+          </div>
+          <div
+            className={`${menuOpen ? "block" : "hidden"} lg:block mt-2 lg:mt-0`}
+          >
+            <div className="mt-[10px] md:mt-0 font-proxima font-[700] text-[18px] lg:text-[30px] text-[#FCCE06] grid text-center md:flex items-center justify-center gap-[10px] lg:gap-[40px]">
+              <p className=" hover:text-white">
+                <a href="#about">ABOUT</a>{" "}
+              </p>
+              <p className=" hover:text-white">
+                {" "}
+                <a href="#tokenomics">TOKENOMICS</a>{" "}
+              </p>
+              <p className=" hover:text-white">
+                {" "}
+                <a href="#buy">HOW TO BUY</a>{" "}
+              </p>
+              <p className=" hover:text-white">
+                <a href="#weegles">WEEGLES</a>
+              </p>
+            </div>
           </div>
           <div className=" text-[#FCCE06] " data-aos="fade-up">
             <p
@@ -453,7 +450,7 @@ const LandingPage = () => {
           </div>
         </div>
 
-        <div className=" py-[40px] max-w-6xl mx-auto">
+        <div className=" py-[60px] max-w-6xl mx-auto">
           <div className="">
             <p
               className="font-bright text-[#FCCE06] font-[700] text-[18px] md:text-[25px] lg:text-[35px] py-[10px]"
@@ -477,7 +474,7 @@ const LandingPage = () => {
               </p>
             </div>
 
-            <div className="flex items-start  py-[10px] gap-[20px]">
+            <div className="flex items-start  py-[10px] gap-[20px] ">
               <img src={checkIcon} alt="Check icon" className="" />
               <p className=" text-justify text-[16px] lg:text-[20px]">
                 <span className="text-[#FFC700]"> $WEEGLE </span> is a community
