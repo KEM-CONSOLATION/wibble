@@ -503,15 +503,28 @@ const LandingPage = () => {
 
         <div className=" py-[60px] max-w-6xl mx-auto">
           <div className="">
-            <p
-              className="font-bright text-[#FCCE06] font-[700] text-[18px] md:text-[25px] lg:text-[35px] py-[10px]"
-              style={{
-                textShadow:
-                  "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-              }}
-            >
-              DISCLAIMER
-            </p>
+            <div className=" flex items-center gap-[10px] justify-center">
+              <div className="relative max-w-[40px]">
+                <video
+                  src={Video}
+                  className="w-full h-auto max-w-full"
+                  autoPlay
+                  muted
+                  loop
+                  data-aos="fade-up"
+                ></video>
+                <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
+              </div>
+              <p
+                className="font-bright text-[#FCCE06] font-[700] text-[18px] md:text-[25px] lg:text-[35px] py-[10px]"
+                style={{
+                  textShadow:
+                    "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
+                }}
+              >
+                DISCLAIMER
+              </p>
+            </div>
             <div className="flex items-start  gap-[20px]">
               <img src={checkIcon} alt="Check icon" className="" />
               <p className=" text-justify text-[16px] lg:text-[20px]">
