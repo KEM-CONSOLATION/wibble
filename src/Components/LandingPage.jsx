@@ -171,7 +171,6 @@ const LandingPage = () => {
               src={Video}
               className="w-full h-auto max-w-full"
               autoPlay
-              // muted
               loop
               data-aos="fade-up"
             ></video>
@@ -562,7 +561,7 @@ const LandingPage = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-4 right-4 bg-[#2F160B] text-white px-4 py-2 rounded-full shadow-lg hover:bg-[#47240E] transition-all duration-300 animate-bounce hover:animate-none"
+          className="fixed bottom-4 right-4 bg-[#ffffff] text-[#2F160B] px-4 py-2 rounded-full shadow-lg hover:bg-[#47240E]  hover:text-white transition-all duration-300 animate-bounce hover:animate-none"
         >
           Back to Top
         </button>
