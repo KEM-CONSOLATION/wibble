@@ -44,13 +44,14 @@ const LandingPage = () => {
     <div className=" max-w-[1920px] 2xl:mx-auto lg:mx-[40px] mx-[10px] mt-[10px] relative text-white">
       <div className=" flex items-center justify-between">
         <div className=" flex items-center justify-start md:hidden">
-          <div className=" lg:hidden block max-w-[40px]">
+          <div className=" lg:hidden block max-w-[40px] relative">
             <img
               src={Logo}
               alt=""
               data-aos="fade-up"
               className="w-full h-auto max-w-full"
             />
+            <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
           </div>
           <div className="    ">
             <p className=" lg:hidden  flex items-center gap-[10px] text-white capitalize font-[700] text-[20px] sm:text-[20px] md:text-[30px] font-bright lg:text-[42px]">
@@ -71,16 +72,17 @@ const LandingPage = () => {
         </div>
       </div>
       <div className=" grid items-center md:flex md:items-start md:justify-center place-items-center  gap-[10px]">
-        <div className=" hidden md:block lg:max-w-[107px]">
+        <div className=" hidden md:block lg:max-w-[107px] relative">
           <img
             src={Logo}
             alt=""
             data-aos="fade-up"
             className="w-full h-auto max-w-full"
           />
+          <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
         </div>
         <div className=" flex flex-col items-center">
-          <p className=" mt-[10px] md:mt-0 flex items-center gap-[10px] text-white capitalize font-[700] text-[16px] md:text-[30px] font-bright lg:text-[50px]">
+          <p className=" hidden mt-[10px] md:mt-0 md:flex items-center gap-[10px] text-white capitalize font-[700] text-[14px] md:text-[30px] font-bright lg:text-[50px]">
             THE{" "}
             <span
               className=" text-[#FCCE06]"
@@ -91,10 +93,28 @@ const LandingPage = () => {
             >
               {" "}
               {""}BINANCE
-            </span>{" "}
+            </span>
             WIBBLE WOBBLE CAT
           </p>
 
+          <div className=" flex flex-col items-center justify-center md:hidden">
+            <p className="  mt-[10px] text-white capitalize font-[700] text-[30px] font-bright ]">
+              THE{" "}
+              <span
+                className=" text-[#FCCE06]"
+                style={{
+                  textShadow:
+                    "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
+                }}
+              >
+                BINANCE
+              </span>
+            </p>
+
+            <p className="  tracking-widest  mt-[10px] md:mt-0 flex items-center gap-[10px] text-white capitalize font-[700] text-[18px] md:text-[30px] font-bright lg:text-[50px]">
+              WIBBLE WOBBLE CAT
+            </p>
+          </div>
           <div
             className={`${menuOpen ? "block" : "hidden"} md:block mt-2 lg:mt-0`}
           >
@@ -136,15 +156,16 @@ const LandingPage = () => {
             </p>
           </div>
 
-          <div className=" max-w-[638px] ">
+          <div className="relative max-w-[638px]">
             <video
               src={Video}
               className="w-full h-auto max-w-full"
               autoPlay
-              // muted
+              muted
               loop
               data-aos="fade-up"
             ></video>
+            <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
           </div>
         </div>
       </div>
@@ -176,14 +197,14 @@ const LandingPage = () => {
         </p>
       </div>
 
-      <div className=" py-[40px] flex items-center justify-center">
+      <div className=" animate-bounce py-[40px] flex items-center justify-center">
         <img src={BuyButton} alt="" />
       </div>
 
       <div className=" text-center">
         <div className=" py-[20px]" id="weegles">
           <p
-            className="font-bright text-[#FCCE06] font-[700] text-[30px] md:text-[50px] lg:text-[70px]"
+            className="font-bright animate-pulse text-[#FCCE06] font-[700] text-[30px] md:text-[50px] lg:text-[70px]"
             style={{
               textShadow:
                 "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
@@ -216,13 +237,13 @@ const LandingPage = () => {
         </div>
 
         <div className="   ">
-          <div className=" py-[40px] flex items-center justify-center">
+          <div className=" py-[40px] flex items-center justify-center animate-bounce">
             <img src={BuyButton} alt="" />
           </div>
 
           <div className=" py-[20px]" id="buy">
             <p
-              className="font-bright animate-bounce text-[#FCCE06] font-[700] text-[30px] md:text-[50px] lg:text-[70px]"
+              className="font-bright animate-pulse text-[#FCCE06] font-[700] text-[30px] md:text-[50px] lg:text-[70px]"
               style={{
                 textShadow:
                   "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
@@ -378,13 +399,13 @@ const LandingPage = () => {
         </div>
 
         <div className="   ">
-          <div className=" py-[40px] flex items-center justify-center">
+          <div className=" py-[40px] flex items-center justify-center animate-bounce">
             <img src={BuyButton} alt="" />
           </div>
 
           <div className=" py-[20px]" id="tokenomics">
             <p
-              className="font-bright animate-bounce text-[#FCCE06] font-[700] text-[30px] md:text-[50px] lg:text-[70px]"
+              className="font-bright animate-pulse text-[#FCCE06] font-[700] text-[30px] md:text-[50px] lg:text-[70px]"
               style={{
                 textShadow:
                   "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
@@ -467,7 +488,7 @@ const LandingPage = () => {
         </div>
 
         <div className="">
-          <div className=" py-[40px] flex items-center justify-center">
+          <div className=" py-[40px] flex items-center justify-center animate-bounce">
             <img src={BuyButton} alt="" />
           </div>
 
