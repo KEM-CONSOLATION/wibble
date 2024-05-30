@@ -53,13 +53,26 @@ const LandingPage = () => {
             />
             <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
           </div>
-          <div className="    ">
-            <p className=" lg:hidden  flex items-center gap-[10px] text-white capitalize font-[700] text-[20px] sm:text-[20px] md:text-[30px] font-bright lg:text-[42px]">
-              WeegleCat
-            </p>
-          </div>
         </div>
-
+        <div className="md:hidden block text-[#FCCE06] " data-aos="fade-up">
+          <p
+            className="font-bright text-[#FCCE06] font-[700] text-[20px] sm:text-[70px]"
+            style={{
+              textShadow:
+                "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
+            }}
+          >
+            <Typewriter
+              words={["WEEGLE"]}
+              loop={0}
+              cursor
+              cursorStyle="_"
+              typeSpeed={70}
+              deleteSpeed={300}
+              delaySpeed={1000}
+            />
+          </p>
+        </div>
         <div className=" md:hidden">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -82,7 +95,7 @@ const LandingPage = () => {
           <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
         </div>
         <div className=" flex flex-col items-center">
-          <p className=" hidden mt-[10px] md:mt-0 md:flex items-center gap-[10px] text-white capitalize font-[700] text-[14px] md:text-[30px] font-bright lg:text-[50px]">
+          <p className=" hidden  mt-[10px] md:mt-0 md:flex items-center gap-[10px] text-white capitalize font-[700] text-[14px] md:text-[30px] font-bright lg:text-[40px]">
             THE{" "}
             <span
               className=" text-[#FCCE06]"
@@ -94,11 +107,11 @@ const LandingPage = () => {
               {" "}
               {""}BINANCE
             </span>
-            WIBBLE WOBBLE CAT
+            WIBBLE WOBBLE C🐱T
           </p>
 
           <div className=" flex flex-col items-center justify-center md:hidden">
-            <p className="  mt-[10px] text-white capitalize font-[700] text-[30px] font-bright ]">
+            <p className="  mt-[10px] text-white capitalize font-[700]  xxs:text-[12px] xs:text-[15px] sm:text-[30px] font-bright ]">
               THE{" "}
               <span
                 className=" text-[#FCCE06]"
@@ -107,12 +120,9 @@ const LandingPage = () => {
                     "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
                 }}
               >
-                BINANCE
+                BINANCE{" "}
               </span>
-            </p>
-
-            <p className="  tracking-widest  mt-[10px] md:mt-0 flex items-center gap-[10px] text-white capitalize font-[700] text-[18px] md:text-[30px] font-bright lg:text-[50px]">
-              WIBBLE WOBBLE CAT
+              WIBBLE WOBBLE C🐱T
             </p>
           </div>
           <div
@@ -135,7 +145,7 @@ const LandingPage = () => {
               </p>
             </div>
           </div>
-          <div className=" text-[#FCCE06] " data-aos="fade-up">
+          <div className=" hidden md:block text-[#FCCE06] " data-aos="fade-up">
             <p
               className="font-bright text-[#FCCE06] font-[700] text-[50px]
               md:text-[50px] lg:text-[180px]"

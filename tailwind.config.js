@@ -7,6 +7,10 @@ export default {
         bright: ["Bright South", "sans-serif"],
         proxima: ["Proxima Nova", "sans-serif"],
       },
+      screens: {
+        xxs: "100px",
+        xs: "370px",
+      },
     },
   },
   plugins: [],
