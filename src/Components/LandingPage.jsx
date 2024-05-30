@@ -60,7 +60,9 @@ const LandingPage = () => {
           <div className="md:hidden">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="text-white text-3xl focus:outline-none"
+              className={`text-white text-3xl focus:outline-none ${
+                !menuOpen ? "animate-bounce" : "animate-none"
+              }`}
             >
               ☰
             </button>
