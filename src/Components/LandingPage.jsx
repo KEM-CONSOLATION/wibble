@@ -56,7 +56,7 @@ const LandingPage = () => {
         </div>
         <div className="md:hidden block text-[#FCCE06] " data-aos="fade-up">
           <p
-            className="font-bright text-[#FCCE06] font-[700] text-[20px] sm:text-[70px]"
+            className="font-bright text-[#FCCE06] font-[700] text-[40px] sm:text-[90px]"
             style={{
               textShadow:
                 "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
@@ -111,7 +111,7 @@ const LandingPage = () => {
           </p>
 
           <div className=" flex flex-col items-center justify-center md:hidden">
-            <p className="  mt-[10px] text-white capitalize font-[700]  xxs:text-[12px] xs:text-[15px] sm:text-[30px] font-bright ]">
+            <p className="  mt-[10px] text-white capitalize font-[700]  xxs:text-[12px] xs:text-[15px] sm:text-[28px] font-bright ">
               THE{" "}
               <span
                 className=" text-[#FCCE06]"
