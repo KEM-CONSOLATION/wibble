@@ -172,8 +172,10 @@ const LandingPage = () => {
               className="w-full h-auto max-w-full"
               autoPlay
               loop
+              controls={false}
               data-aos="fade-up"
             ></video>
+
             <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
           </div>
         </div>
@@ -520,6 +522,7 @@ const LandingPage = () => {
                   autoPlay
                   muted
                   loop
+                  controls={false}
                   data-aos="fade-up"
                 ></video>
                 <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
