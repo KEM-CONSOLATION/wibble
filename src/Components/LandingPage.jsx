@@ -183,16 +183,15 @@ const LandingPage = () => {
               controls={false}
               data-aos="fade-up"
             ></video> */}
-            {/* <ReactPlayer
+            <ReactPlayer
               url={Video}
               playing
-              muted
               loop
               width="100%"
               height="auto"
-              controls={true}
-            /> */}
-            <video
+              controls={false}
+            />
+            {/* <video
               ref={videoRef}
               src={Video}
               className="w-full h-auto max-w-full"
@@ -202,7 +201,7 @@ const LandingPage = () => {
               playsInline
               controls={false}
               data-aos="fade-up"
-            ></video>
+            ></video> */}
             <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
           </div>
         </div>
