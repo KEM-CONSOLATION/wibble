@@ -15,6 +15,7 @@ import Telegram from "../assets/Telegram.svg";
 import icon1 from "../assets/icon1.svg";
 import icon2 from "../assets/icon2.svg";
 import { Typewriter } from "react-simple-typewriter";
+import ReactPlayer from "react-player";
 // import ReactPlayer from "react-player";
 const LandingPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -183,25 +184,25 @@ const LandingPage = () => {
               controls={false}
               data-aos="fade-up"
             ></video> */}
-            {/* <ReactPlayer
+            <ReactPlayer
               url={Video}
               playing
               loop
               width="100%"
               height="auto"
               controls={false}
-            /> */}
-            <video
+            />
+            {/* <video
               ref={videoRef}
               src={Video}
               className="w-full h-auto max-w-full"
               autoPlay
-              // muted
+              muted
               loop
               playsInline
               controls={false}
               data-aos="fade-up"
-            ></video>
+            ></video> */}
             <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
           </div>
         </div>
