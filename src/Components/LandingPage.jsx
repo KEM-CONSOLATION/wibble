@@ -15,6 +15,7 @@ import Telegram from "../assets/Telegram.svg";
 import icon1 from "../assets/icon1.svg";
 import icon2 from "../assets/icon2.svg";
 import { Typewriter } from "react-simple-typewriter";
+import ReactPlayer from "react-player";
 const LandingPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,6 +35,7 @@ const LandingPage = () => {
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.controls = false;
+      console.log(videoRef.current.controls);
     }
   }, []);
   useEffect(() => {
@@ -173,15 +175,34 @@ const LandingPage = () => {
           </div>
 
           <div className="relative max-w-[638px]">
-            <video
+            {/* <video
               src={Video}
               className="w-full h-auto max-w-full"
               autoPlay
               loop
               controls={false}
               data-aos="fade-up"
+            ></video> */}
+            {/* <ReactPlayer
+              url={Video}
+              playing
+              muted
+              loop
+              width="100%"
+              height="auto"
+              controls={true}
+            /> */}
+            <video
+              ref={videoRef}
+              src={Video}
+              className="w-full h-auto max-w-full"
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls={false}
+              data-aos="fade-up"
             ></video>
-
             <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
           </div>
         </div>
@@ -521,7 +542,7 @@ const LandingPage = () => {
         <div className=" py-[60px] max-w-6xl mx-auto">
           <div className="">
             <div className=" flex items-center gap-[10px] justify-center">
-              <div className="relative max-w-[40px]">
+              <div className="relative max-w-[40px]" data-aos="fade-up">
                 <video
                   ref={videoRef}
                   src={Video}
