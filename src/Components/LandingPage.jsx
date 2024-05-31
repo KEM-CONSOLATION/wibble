@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -29,7 +29,13 @@ const LandingPage = () => {
       setIsVisible(false);
     }
   };
+  const videoRef = useRef(null);
 
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.controls = false;
+    }
+  }, []);
   useEffect(() => {
     window.addEventListener("scroll", toggleVisibility);
     AOS.init({
@@ -517,12 +523,13 @@ const LandingPage = () => {
             <div className=" flex items-center gap-[10px] justify-center">
               <div className="relative max-w-[40px]">
                 <video
+                  ref={videoRef}
                   src={Video}
                   className="w-full h-auto max-w-full"
                   autoPlay
                   muted
                   loop
-                  controls={false}
+                  playsInline
                   data-aos="fade-up"
                 ></video>
                 <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
