@@ -196,7 +196,7 @@ const LandingPage = () => {
               src={Video}
               className="w-full h-auto max-w-full"
               autoPlay
-              muted
+              // muted
               loop
               playsInline
               controls={false}
