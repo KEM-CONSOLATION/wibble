@@ -15,8 +15,6 @@ import Telegram from "../assets/Telegram.svg";
 import icon1 from "../assets/icon1.svg";
 import icon2 from "../assets/icon2.svg";
 import { Typewriter } from "react-simple-typewriter";
-import ReactPlayer from "react-player";
-// import ReactPlayer from "react-player";
 const LandingPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -39,6 +37,7 @@ const LandingPage = () => {
       console.log(videoRef.current.controls);
     }
   }, []);
+
   useEffect(() => {
     window.addEventListener("scroll", toggleVisibility);
     AOS.init({
@@ -176,21 +175,11 @@ const LandingPage = () => {
           </div>
 
           <div className="relative max-w-[638px]">
-            {/* <video
-              src={Video}
-              className="w-full h-auto max-w-full"
-              autoPlay
-              loop
-              controls={false}
-              data-aos="fade-up"
-            ></video> */}
-
             <video
               ref={videoRef}
               src={Video}
               className="w-full h-auto max-w-full"
               autoPlay
-              muted
               loop
               playsInline
               controls={false}
@@ -541,7 +530,7 @@ const LandingPage = () => {
                   src={Video}
                   className="w-full h-auto max-w-full"
                   autoPlay
-                  muted={false}
+                  muted
                   loop
                   playsInline
                   controls={false}
@@ -584,6 +573,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+
       {isVisible && (
         <button
           onClick={scrollToTop}
