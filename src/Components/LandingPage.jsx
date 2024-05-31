@@ -529,9 +529,11 @@ const LandingPage = () => {
                   autoPlay
                   muted
                   loop
-                  // playsInline
+                  playsInline
+                  controls={false}
                   data-aos="fade-up"
                 ></video>
+
                 <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
               </div>
               <p
