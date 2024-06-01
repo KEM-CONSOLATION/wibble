@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Logo from "../assets/catLogo.png";
+import NewVideo from "../assets/fonts/NewVideo.mov";
 import BuyButton from "../assets/Buy_Weegle_Button.svg";
 import checkIcon from "../assets/checkIcon.svg";
 import DexScreener from "../assets/DexScreener.svg";
@@ -12,7 +12,6 @@ import CoincapMarket from "../assets/CoincapMarket.svg";
 import XIcon from "../assets/XIcon.svg";
 import Telegram from "../assets/Telegram.svg";
 import WeegleGIF from "../assets/WIGGLEEGG.gif";
-import WeegleSound from "../assets/WIGGLEEGG.wav";
 import icon1 from "../assets/icon1.svg";
 import icon2 from "../assets/icon2.svg";
 import { Typewriter } from "react-simple-typewriter";
@@ -21,7 +20,8 @@ import { RiArrowUpDoubleLine } from "react-icons/ri";
 const LandingPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [audioPromptVisible, setAudioPromptVisible] = useState(false);
+  const [videoPromptVisible, setVideoPromptVisible] = useState(false);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -53,48 +53,43 @@ const LandingPage = () => {
   }, []);
 
   useEffect(() => {
-    const audio = document.getElementById("weegle-audio");
-    audio.play().catch(() => {
-      setAudioPromptVisible(true);
+    const video = document.getElementById("weegle-video");
+    video.play().catch(() => {
+      setVideoPromptVisible(true);
     });
   }, []);
-  const handlePlayAudio = () => {
-    const audio = document.getElementById("weegle-audio");
-    audio
+
+  const handlePlayVideo = () => {
+    const video = document.getElementById("weegle-video");
+    video
       .play()
       .then(() => {
-        setAudioPromptVisible(false);
+        setVideoPromptVisible(false);
       })
       .catch((error) => {
-        console.error("Failed to play audio:", error);
+        console.error("Failed to play video:", error);
       });
   };
   return (
     <div className=" max-w-[1920px] 2xl:mx-auto lg:mx-[40px] mx-[10px] mt-[10px] relative text-white">
-      <audio id="weegle-audio" src={WeegleSound} loop autoPlay />
-      {audioPromptVisible && (
+      {videoPromptVisible && (
         <div className=" z-20 fixed top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white p-4 rounded-md shadow-lg text-center">
           <p>
-            Please click the button below to enable sound for the best
+            Please click the button below to enable video for the best
             experience.
           </p>
           <button
-            onClick={handlePlayAudio}
+            onClick={handlePlayVideo}
             className="bg-yellow-500 text-black px-4 py-2 mt-2 rounded-md"
           >
-            Enable Sound
+            Enable Video
           </button>
         </div>
       )}
       <div className=" flex items-center justify-between">
         <div className=" flex items-center justify-start md:hidden">
           <div className=" lg:hidden block max-w-[40px] relative">
-            <img
-              src={Logo}
-              alt=""
-              data-aos="fade-up"
-              className="w-full h-auto max-w-full"
-            />
+            <img src={WeegleGIF} alt="" />
             <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
           </div>
         </div>
@@ -129,13 +124,8 @@ const LandingPage = () => {
         </div>
       </div>
       <div className=" grid items-center md:flex md:items-start md:justify-center place-items-center  gap-[10px]">
-        <div className=" hidden md:block lg:max-w-[107px] relative">
-          <img
-            src={Logo}
-            alt=""
-            data-aos="fade-up"
-            className="w-full h-auto max-w-full"
-          />
+        <div className=" hidden md:block max-w-[107px] relative">
+          <img src={WeegleGIF} alt="" />
           <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
         </div>
         <div className=" flex flex-col items-center">
@@ -211,7 +201,15 @@ const LandingPage = () => {
           </div>
 
           <div className="relative max-w-[638px]">
-            <img src={WeegleGIF} alt="My GIF" />
+            <video
+              id="weegle-video"
+              src={NewVideo}
+              data-aos="fade-up"
+              className="w-full h-auto max-w-full"
+              autoPlay
+              loop
+              controls={false}
+            ></video>
             <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
           </div>
         </div>
