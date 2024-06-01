@@ -21,6 +21,7 @@ const LandingPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [videoPromptVisible, setVideoPromptVisible] = useState(false);
+  const videoRef = useRef(null);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -33,12 +34,28 @@ const LandingPage = () => {
       setIsVisible(false);
     }
   };
-  const videoRef = useRef(null);
 
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.controls = false;
     }
+  }, []);
+
+  useEffect(() => {
+    const video = videoRef.current;
+
+    const playWithSound = () => {
+      video.muted = false;
+      video.play();
+    };
+
+    document.addEventListener("click", playWithSound, { once: true });
+    document.addEventListener("touchstart", playWithSound, { once: true });
+
+    return () => {
+      document.removeEventListener("click", playWithSound);
+      document.removeEventListener("touchstart", playWithSound);
+    };
   }, []);
 
   useEffect(() => {
@@ -202,15 +219,18 @@ const LandingPage = () => {
 
           <div className="relative max-w-[638px]">
             <video
+              ref={videoRef}
               id="weegle-video"
-              src={NewVideo}
-              data-aos="fade-up"
-              className="w-full h-auto max-w-full"
+              className=" rounded-xl"
+              controls
+              muted
+              playsInline
               autoPlay
               loop
-              controls={false}
-              playsInline
-            ></video>
+              preload="auto"
+            >
+              <source src={NewVideo} type="video/mp4" />
+            </video>
             <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
           </div>
         </div>
