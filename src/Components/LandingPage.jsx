@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Logo from "../assets/catLogo.png";
-import Video from "../assets/fonts/VideoLogo.mp4";
 import BuyButton from "../assets/Buy_Weegle_Button.svg";
 import checkIcon from "../assets/checkIcon.svg";
 import DexScreener from "../assets/DexScreener.svg";
@@ -12,9 +11,13 @@ import Coingeco from "../assets/Coingeco.svg";
 import CoincapMarket from "../assets/CoincapMarket.svg";
 import XIcon from "../assets/XIcon.svg";
 import Telegram from "../assets/Telegram.svg";
+import WeegleGIF from "../assets/WIGGLEEGG.gif";
+import WeegleSound from "../assets/fonts/audio.mp3";
 import icon1 from "../assets/icon1.svg";
 import icon2 from "../assets/icon2.svg";
 import { Typewriter } from "react-simple-typewriter";
+import { RiArrowUpDoubleLine } from "react-icons/ri";
+
 const LandingPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,7 +37,6 @@ const LandingPage = () => {
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.controls = false;
-      console.log(videoRef.current.controls);
     }
   }, []);
 
@@ -50,6 +52,7 @@ const LandingPage = () => {
   }, []);
   return (
     <div className=" max-w-[1920px] 2xl:mx-auto lg:mx-[40px] mx-[10px] mt-[10px] relative text-white">
+      <audio src={WeegleSound} autoPlay loop />
       <div className=" flex items-center justify-between">
         <div className=" flex items-center justify-start md:hidden">
           <div className=" lg:hidden block max-w-[40px] relative">
@@ -175,16 +178,7 @@ const LandingPage = () => {
           </div>
 
           <div className="relative max-w-[638px]">
-            <video
-              ref={videoRef}
-              src={Video}
-              className="w-full h-auto max-w-full"
-              autoPlay
-              loop
-              playsInline
-              controls={false}
-              data-aos="fade-up"
-            ></video>
+            <img src={WeegleGIF} alt="My GIF" />
             <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
           </div>
         </div>
@@ -525,18 +519,7 @@ const LandingPage = () => {
           <div className="">
             <div className=" flex items-center gap-[10px] justify-center">
               <div className="relative max-w-[40px]" data-aos="fade-up">
-                <video
-                  ref={videoRef}
-                  src={Video}
-                  className="w-full h-auto max-w-full"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  controls={false}
-                  data-aos="fade-up"
-                ></video>
-
+                <img src={WeegleGIF} alt="" />
                 <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
               </div>
               <p
@@ -577,9 +560,9 @@ const LandingPage = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-4 right-4 bg-[#ffffff] text-[#2F160B] px-4 py-2 rounded-full shadow-lg hover:bg-[#47240E]  hover:text-white transition-all duration-300 animate-bounce hover:animate-none"
+          className="fixed bottom-4 right-4 bg-[#ffffff] text-[#2F160B] px-4 py-4 rounded-full shadow-lg hover:bg-[#47240E] hover:text-white transition-all duration-300 animate-bounce hover:animate-none"
         >
-          Back to Top
+          <RiArrowUpDoubleLine className="text-2xl" />
         </button>
       )}
     </div>
