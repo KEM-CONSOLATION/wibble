@@ -201,10 +201,8 @@ const LandingPage = () => {
             <video
               ref={videoRef}
               className="rounded-xl"
-              controls={false}
               muted
               playsInline
-              // autoPlay
               loop
               preload="auto"
             >
