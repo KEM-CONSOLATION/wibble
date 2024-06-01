@@ -209,6 +209,7 @@ const LandingPage = () => {
               autoPlay
               loop
               controls={false}
+              playsInline
             ></video>
             <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
           </div>
