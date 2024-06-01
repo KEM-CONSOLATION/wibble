@@ -12,7 +12,7 @@ import CoincapMarket from "../assets/CoincapMarket.svg";
 import XIcon from "../assets/XIcon.svg";
 import Telegram from "../assets/Telegram.svg";
 import WeegleGIF from "../assets/WIGGLEEGG.gif";
-import WeegleSound from "../assets/fonts/audio.mp3";
+import WeegleSound from "../assets/WIGGLEEGG.wav";
 import icon1 from "../assets/icon1.svg";
 import icon2 from "../assets/icon2.svg";
 import { Typewriter } from "react-simple-typewriter";
