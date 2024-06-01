@@ -20,7 +20,7 @@ import { RiArrowUpDoubleLine } from "react-icons/ri";
 const LandingPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [videoPromptVisible, setVideoPromptVisible] = useState(false);
+  // const [videoPromptVisible, setVideoPromptVisible] = useState(false);
   const videoRef = useRef(null);
 
   const scrollToTop = () => {
@@ -69,27 +69,27 @@ const LandingPage = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const video = document.getElementById("weegle-video");
-    video.play().catch(() => {
-      setVideoPromptVisible(true);
-    });
-  }, []);
+  // useEffect(() => {
+  //   const video = document.getElementById("weegle-video");
+  //   video.play().catch(() => {
+  //     setVideoPromptVisible(true);
+  //   });
+  // }, []);
 
-  const handlePlayVideo = () => {
-    const video = document.getElementById("weegle-video");
-    video
-      .play()
-      .then(() => {
-        setVideoPromptVisible(false);
-      })
-      .catch((error) => {
-        console.error("Failed to play video:", error);
-      });
-  };
+  // const handlePlayVideo = () => {
+  //   const video = document.getElementById("weegle-video");
+  //   video
+  //     .play()
+  //     .then(() => {
+  //       setVideoPromptVisible(false);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Failed to play video:", error);
+  //     });
+  // };
   return (
     <div className=" max-w-[1920px] 2xl:mx-auto lg:mx-[40px] mx-[10px] mt-[10px] relative text-white">
-      {videoPromptVisible && (
+      {/* {videoPromptVisible && (
         <div className=" z-20 fixed top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white p-4 rounded-md shadow-lg text-center">
           <p>
             Please click the button below to enable video for the best
@@ -102,7 +102,7 @@ const LandingPage = () => {
             Enable Video
           </button>
         </div>
-      )}
+      )} */}
       <div className=" flex items-center justify-between">
         <div className=" flex items-center justify-start md:hidden">
           <div className=" lg:hidden block max-w-[40px] relative">
