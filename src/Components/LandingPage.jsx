@@ -296,7 +296,7 @@ const LandingPage = () => {
                   "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
               }}
             >
-              HOW TO BUY $WeeGLE
+              HOW TO BUY $WEEGLE
             </p>
           </div>
 
@@ -406,7 +406,7 @@ const LandingPage = () => {
               </p>
               <p>
                 Swap <span className=" text-[#FCCE06]">BNB</span> for{" "}
-                <span className=" text-[#FCCE06]">Weegle</span>
+                <span className=" text-[#FCCE06]">WEEGLE</span>
               </p>
               <p>
                 - Import Weegle Token: If Weegle isn&apos;t listed by default,
@@ -433,7 +433,7 @@ const LandingPage = () => {
               >
                 STEP 5:
               </p>
-              <p>Add Weegle to Your Wallet</p>
+              <p>Add WEEGLE to Your Wallet</p>
 
               <p className=" ">
                 - Manually Add Weegle: After purchasing, you may need to add
@@ -522,7 +522,7 @@ const LandingPage = () => {
               </div>
               <div className=" py-[10px]">
                 <p className=" ">
-                  Token Burn Mechanism (TBM): Weegle to Burn Burn Rate: 1% after
+                  Token Burn Mechanism (TBM): Weegle to Burn Rate: 1% after
                   every 10,000,000,000 Wiggles until Deployment wallet it Empty
                 </p>
                 <p className=" pt-[10px]">
