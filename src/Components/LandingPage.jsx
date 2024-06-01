@@ -1,8 +1,8 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import NewVideo from "../assets/fonts/NewVideo.mp4";
+import Audio from "../assets/fonts/audio.mp3";
 import BuyButton from "../assets/Buy_Weegle_Button.svg";
 import checkIcon from "../assets/checkIcon.svg";
 import DexScreener from "../assets/DexScreener.svg";
@@ -20,8 +20,7 @@ import { RiArrowUpDoubleLine } from "react-icons/ri";
 const LandingPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const videoRef = useRef(null);
-
+  const [audioPromptVisible, setAudioPromptVisible] = useState(false);
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -35,29 +34,6 @@ const LandingPage = () => {
   };
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.controls = false;
-    }
-  }, []);
-
-  useEffect(() => {
-    const video = videoRef.current;
-
-    const playWithSound = () => {
-      video.muted = false;
-      video.play();
-    };
-
-    document.addEventListener("click", playWithSound, { once: true });
-    document.addEventListener("touchstart", playWithSound, { once: true });
-
-    return () => {
-      document.removeEventListener("click", playWithSound);
-      document.removeEventListener("touchstart", playWithSound);
-    };
-  }, []);
-
-  useEffect(() => {
     window.addEventListener("scroll", toggleVisibility);
     AOS.init({
       duration: 1000,
@@ -69,20 +45,39 @@ const LandingPage = () => {
   }, []);
 
   useEffect(() => {
-    const playVideoOnGesture = () => {
-      videoRef.current.muted = false;
-      videoRef.current.play();
-    };
-
-    document.addEventListener("touchstart", playVideoOnGesture, { once: true });
-
-    return () => {
-      document.removeEventListener("touchstart", playVideoOnGesture);
-    };
+    const audio = document.getElementById("weegle-audio");
+    audio.play().catch(() => {
+      setAudioPromptVisible(true);
+    });
   }, []);
-
+  const handlePlayAudio = () => {
+    const audio = document.getElementById("weegle-audio");
+    audio
+      .play()
+      .then(() => {
+        setAudioPromptVisible(false);
+      })
+      .catch((error) => {
+        console.error("Failed to play audio:", error);
+      });
+  };
   return (
     <div className=" max-w-[1920px] 2xl:mx-auto lg:mx-[40px] mx-[10px] mt-[10px] relative text-white">
+      <audio id="weegle-audio" src={Audio} loop autoPlay />
+      {audioPromptVisible && (
+        <div className=" z-20 fixed top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white p-4 rounded-md shadow-lg text-center">
+          <p>
+            Please click the button below to enable sound for the best
+            experience.
+          </p>
+          <button
+            onClick={handlePlayAudio}
+            className="bg-yellow-500 text-black px-4 py-2 mt-2 rounded-md"
+          >
+            Enable Sound
+          </button>
+        </div>
+      )}
       <div className=" flex items-center justify-between">
         <div className=" flex items-center justify-start md:hidden">
           <div className=" lg:hidden block max-w-[40px] relative">
@@ -198,16 +193,7 @@ const LandingPage = () => {
           </div>
 
           <div className="relative max-w-[638px]">
-            <video
-              ref={videoRef}
-              className="rounded-xl"
-              muted
-              playsInline
-              loop
-              preload="auto"
-            >
-              <source src={NewVideo} type="video/mp4" />
-            </video>
+            <img src={WeegleGIF} alt="" />
             <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
           </div>
         </div>
