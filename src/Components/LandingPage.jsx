@@ -201,7 +201,7 @@ const LandingPage = () => {
             <video
               ref={videoRef}
               className="rounded-xl"
-              controls
+              controls={false}
               muted
               playsInline
               // autoPlay
