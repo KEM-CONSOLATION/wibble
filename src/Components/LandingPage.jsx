@@ -21,6 +21,7 @@ import { RiArrowUpDoubleLine } from "react-icons/ri";
 const LandingPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [audioPromptVisible, setAudioPromptVisible] = useState(false);
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -50,9 +51,41 @@ const LandingPage = () => {
       window.removeEventListener("scroll", toggleVisibility);
     };
   }, []);
+
+  useEffect(() => {
+    const audio = document.getElementById("weegle-audio");
+    audio.play().catch(() => {
+      setAudioPromptVisible(true);
+    });
+  }, []);
+  const handlePlayAudio = () => {
+    const audio = document.getElementById("weegle-audio");
+    audio
+      .play()
+      .then(() => {
+        setAudioPromptVisible(false);
+      })
+      .catch((error) => {
+        console.error("Failed to play audio:", error);
+      });
+  };
   return (
     <div className=" max-w-[1920px] 2xl:mx-auto lg:mx-[40px] mx-[10px] mt-[10px] relative text-white">
-      <audio src={WeegleSound} autoPlay loop />
+      <audio id="weegle-audio" src={WeegleSound} loop autoPlay />
+      {audioPromptVisible && (
+        <div className=" z-20 fixed top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white p-4 rounded-md shadow-lg text-center">
+          <p>
+            Please click the button below to enable sound for the best
+            experience.
+          </p>
+          <button
+            onClick={handlePlayAudio}
+            className="bg-yellow-500 text-black px-4 py-2 mt-2 rounded-md"
+          >
+            Enable Sound
+          </button>
+        </div>
+      )}
       <div className=" flex items-center justify-between">
         <div className=" flex items-center justify-start md:hidden">
           <div className=" lg:hidden block max-w-[40px] relative">
