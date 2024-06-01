@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import NewVideo from "../assets/fonts/NewVideo.mov";
+import NewVideo from "../assets/fonts/NewVideo.mp4";
 import BuyButton from "../assets/Buy_Weegle_Button.svg";
 import checkIcon from "../assets/checkIcon.svg";
 import DexScreener from "../assets/DexScreener.svg";
@@ -20,7 +20,6 @@ import { RiArrowUpDoubleLine } from "react-icons/ri";
 const LandingPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  // const [videoPromptVisible, setVideoPromptVisible] = useState(false);
   const videoRef = useRef(null);
 
   const scrollToTop = () => {
@@ -69,40 +68,21 @@ const LandingPage = () => {
     };
   }, []);
 
-  // useEffect(() => {
-  //   const video = document.getElementById("weegle-video");
-  //   video.play().catch(() => {
-  //     setVideoPromptVisible(true);
-  //   });
-  // }, []);
+  useEffect(() => {
+    const playVideoOnGesture = () => {
+      videoRef.current.muted = false;
+      videoRef.current.play();
+    };
 
-  // const handlePlayVideo = () => {
-  //   const video = document.getElementById("weegle-video");
-  //   video
-  //     .play()
-  //     .then(() => {
-  //       setVideoPromptVisible(false);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Failed to play video:", error);
-  //     });
-  // };
+    document.addEventListener("touchstart", playVideoOnGesture, { once: true });
+
+    return () => {
+      document.removeEventListener("touchstart", playVideoOnGesture);
+    };
+  }, []);
+
   return (
     <div className=" max-w-[1920px] 2xl:mx-auto lg:mx-[40px] mx-[10px] mt-[10px] relative text-white">
-      {/* {videoPromptVisible && (
-        <div className=" z-20 fixed top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white p-4 rounded-md shadow-lg text-center">
-          <p>
-            Please click the button below to enable video for the best
-            experience.
-          </p>
-          <button
-            onClick={handlePlayVideo}
-            className="bg-yellow-500 text-black px-4 py-2 mt-2 rounded-md"
-          >
-            Enable Video
-          </button>
-        </div>
-      )} */}
       <div className=" flex items-center justify-between">
         <div className=" flex items-center justify-start md:hidden">
           <div className=" lg:hidden block max-w-[40px] relative">
@@ -220,12 +200,11 @@ const LandingPage = () => {
           <div className="relative max-w-[638px]">
             <video
               ref={videoRef}
-              id="weegle-video"
-              className=" rounded-xl"
+              className="rounded-xl"
               controls
               muted
               playsInline
-              autoPlay
+              // autoPlay
               loop
               preload="auto"
             >
