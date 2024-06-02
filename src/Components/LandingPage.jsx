@@ -132,7 +132,7 @@ const LandingPage = () => {
               {" "}
               {""}BINANCE
             </span>
-            WEEGLE WOBBLE C🐱T
+            WEEBLE WOBBLE C🐱T
           </p>
 
           <div className=" flex flex-col items-center justify-center md:hidden">
@@ -147,7 +147,7 @@ const LandingPage = () => {
               >
                 BINANCE{" "}
               </span>
-              WEEGLE WOBBLE C🐱T
+              WEEBLE WOBBLE C🐱T
             </p>
           </div>
           <div
