@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Audio from "../assets/fonts/audio.mp3";
 import BuyButton from "../assets/Buy_Weegle_Button.svg";
 import checkIcon from "../assets/checkIcon.svg";
 import DexScreener from "../assets/DexScreener.svg";
@@ -20,7 +19,7 @@ import { RiArrowUpDoubleLine } from "react-icons/ri";
 const LandingPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [audioPromptVisible, setAudioPromptVisible] = useState(false);
+  // const [audioPromptVisible, setAudioPromptVisible] = useState(false);
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -44,27 +43,27 @@ const LandingPage = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const audio = document.getElementById("weegle-audio");
-    audio.play().catch(() => {
-      setAudioPromptVisible(true);
-    });
-  }, []);
-  const handlePlayAudio = () => {
-    const audio = document.getElementById("weegle-audio");
-    audio
-      .play()
-      .then(() => {
-        setAudioPromptVisible(false);
-      })
-      .catch((error) => {
-        console.error("Failed to play audio:", error);
-      });
-  };
+  // useEffect(() => {
+  //   const audio = document.getElementById("weegle-audio");
+  //   audio.play().catch(() => {
+  //     setAudioPromptVisible(true);
+  //   });
+  // }, []);
+  // const handlePlayAudio = () => {
+  //   const audio = document.getElementById("weegle-audio");
+  //   audio
+  //     .play()
+  //     .then(() => {
+  //       setAudioPromptVisible(false);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Failed to play audio:", error);
+  //     });
+  // };
   return (
     <div className=" max-w-[1920px] 2xl:mx-auto lg:mx-[40px] mx-[10px] mt-[10px] relative text-white">
-      <audio id="weegle-audio" src={Audio} loop autoPlay />
-      {audioPromptVisible && (
+      {/* <audio id="weegle-audio" src={Audio} loop autoPlay /> */}
+      {/* {audioPromptVisible && (
         <div className=" z-20 fixed top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white p-4 rounded-md shadow-lg text-center">
           <p>
             Please click the button below to enable sound for the best
@@ -77,7 +76,7 @@ const LandingPage = () => {
             Enable Sound
           </button>
         </div>
-      )}
+      )} */}
       <div className=" flex items-center justify-between">
         <div className=" flex items-center justify-start md:hidden">
           <div className=" lg:hidden block max-w-[40px] relative">
@@ -133,7 +132,7 @@ const LandingPage = () => {
               {" "}
               {""}BINANCE
             </span>
-            WIBBLE WOBBLE C🐱T
+            WEEGLE WOBBLE C🐱T
           </p>
 
           <div className=" flex flex-col items-center justify-center md:hidden">
@@ -148,7 +147,7 @@ const LandingPage = () => {
               >
                 BINANCE{" "}
               </span>
-              WIBBLE WOBBLE C🐱T
+              WEEGLE WOBBLE C🐱T
             </p>
           </div>
           <div
@@ -201,7 +200,7 @@ const LandingPage = () => {
 
       <div
         id="about"
-        className=" mx-[10px]  md:mx-0  grid gap-[30px] items-center place-items-center"
+        className=" mx-[10px]  2xl:mx-40  grid gap-[30px] items-center place-items-center"
         data-aos="fade-up"
       >
         <p className=" font-bright text-[30px] lg:text-[70px] font-[700] text-[#FCCE06]">
@@ -232,13 +231,7 @@ const LandingPage = () => {
 
       <div className=" text-center">
         <div className=" py-[20px]" id="weegles">
-          <p
-            className="font-bright animate-pulse text-[#FCCE06] font-[700] text-[30px] md:text-[50px] lg:text-[70px]"
-            style={{
-              textShadow:
-                "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-            }}
-          >
+          <p className="font-bright text-[#FCCE06] font-[700] text-[30px] md:text-[50px] lg:text-[70px]">
             MISSION + ROADMAP
           </p>
         </div>
@@ -265,186 +258,151 @@ const LandingPage = () => {
           </div>
         </div>
 
-        <div className="   ">
+        <div className="    mx-[10px]  2xl:mx-40">
           <div className=" py-[40px] flex items-center justify-center animate-bounce">
             <img src={BuyButton} alt="" />
           </div>
 
           <div className=" py-[20px]" id="buy">
-            <p
-              className="font-bright animate-pulse text-[#FCCE06] font-[700] text-[30px] md:text-[50px] lg:text-[70px]"
-              style={{
-                textShadow:
-                  "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-              }}
-            >
+            <p className="font-bright  text-[#FCCE06] font-[700] text-[30px] md:text-[50px] lg:text-[70px]">
               HOW TO BUY $WEEGLE
             </p>
           </div>
 
-          <div className=" grid md:grid-cols-2 mx-[10px] md:mx-0 items-start place-items-center gap-[40px] text-left lg:grid-cols-3">
-            <div className=" font-proxima max-w-[444px] text-[14px] lg:text-[16px] font-[500]">
-              <p
-                className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]"
-                style={{
-                  textShadow:
-                    "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-                }}
-              >
-                STEP 1:
-              </p>
-              <p>Set Up Your Wallet</p>
-              <p>- Install MetaMask or Trust Wallet</p>
-              <p>- Add the BSC Network to MetaMask: </p>
-              <p>
-                Open MetaMask, go to Settings {">"} Networks {">"} Add Network
-                and input the following details:
-              </p>
-              <div className=" pl-[4px]">
-                <p>- Network Name: Binance Smart Chain</p>
-                <p>
-                  - New RPC URL:{" "}
-                  <a
-                    href="https://bsc-dataseed.binance.org/"
-                    target="blank"
-                    className=" text-[#FCCE06]"
-                  >
-                    https://bsc-dataseed.binance.org/
-                  </a>{" "}
+          <div className="flex justify-center items-center ">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[40px] text-center font-proxima text-[18px] lg:text-[30px] mx-[10px] md:mx-0">
+              <div>
+                <p
+                  className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]"
+                  style={{
+                    textShadow:
+                      "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
+                  }}
+                >
+                  STEP 1:
                 </p>
-                <p>- Chain ID: 56</p>
-                <p>- Symbol: BNB</p>
+                <p>Download Trust Wallet and Set up</p>
+              </div>
+              <div>
+                <p
+                  className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]"
+                  style={{
+                    textShadow:
+                      "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
+                  }}
+                >
+                  STEP 2:
+                </p>
+                <p>Fund Your Wallet with BNB</p>
+              </div>
+              <div>
+                <p
+                  className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]"
+                  style={{
+                    textShadow:
+                      "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
+                  }}
+                >
+                  STEP 3:
+                </p>
+                <p>Once wallet is funded, tap on the in-App browser</p>
+              </div>
+              <div>
+                <p
+                  className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]"
+                  style={{
+                    textShadow:
+                      "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
+                  }}
+                >
+                  STEP 4:
+                </p>
                 <p>
-                  - Block Explorer URL:{" "}
+                  Input the DEX URL{" "}
                   <a
-                    href="https://bscscan.com"
-                    target="blank"
-                    className=" text-[#FCCE06]"
+                    href="https://pancakeswap.finance"
+                    className="text-[#FCCE06]"
                   >
-                    https://bscscan.com
+                    https://pancakeswap.finance
                   </a>
                 </p>
-              </div>{" "}
-            </div>
-            <div className=" font-proxima max-w-[444px] text-[14px] lg:text-[16px] font-[500]">
-              <p
-                className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]"
-                style={{
-                  textShadow:
-                    "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-                }}
-              >
-                STEP 2:
-              </p>
-              <p>Fund Your Wallet with BNB</p>
-              <p>
-                - Buy BNB: Purchase{" "}
-                <span className=" text-[#FCCE06]">Binance</span> Coin (BNB) on
-                an exchange such as Binance, Coinbase, or any other platform
-                supporting BNB.
-              </p>
-              <p className=" pt-[10px]">
-                - Transfer BNB to Your Wallet: Transfer the purchased BNB to
-                your MetaMask or Trust Wallet using your wallet’s BSC address.
-              </p>
-            </div>
-            <div className=" font-proxima max-w-[444px] text-[14px] lg:text-[16px] font-[500]">
-              <p
-                className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]"
-                style={{
-                  textShadow:
-                    "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-                }}
-              >
-                STEP 3:
-              </p>
-              <p>Connect to PancakeSwap</p>
-              <p>
-                - Visit PancakeSwap: Open{" "}
-                <a
-                  className=" text-[#FCCE06]"
-                  href="https://pancakeswap.finance"
-                  target="blank"
+              </div>
+              <div>
+                <p
+                  className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]"
+                  style={{
+                    textShadow:
+                      "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
+                  }}
                 >
-                  https://pancakeswap.finance
-                </a>{" "}
-                in your browser.
-              </p>
-              <p className=" pt-[10px]">
-                - Connect Your Wallet: Click &apos;Connect Wallet&apos; and
-                select MetaMask or Trust Wallet to link your wallet to
-                PancakeSwap.
-              </p>
-            </div>
-            <div className=" font-proxima max-w-[444px] text-[14px] lg:text-[16px] font-[500]">
-              <p
-                className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]"
-                style={{
-                  textShadow:
-                    "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-                }}
-              >
-                STEP 4:
-              </p>
-              <p>
-                Swap <span className=" text-[#FCCE06]">BNB</span> for{" "}
-                <span className=" text-[#FCCE06]">WEEGLE</span>
-              </p>
-              <p>
-                - Import Weegle Token: If Weegle isn&apos;t listed by default,
-                you&apos;ll need to import it. Click &apos;Select a
-                currency&lsquo;, and paste the Weegle contract address.
-              </p>
-              <p className=" py-[10px]">
-                - Adjust Slippage: Set the slippage tolerance (usually between
-                1-12%) to accommodate market fluctuations.
-              </p>
-              <p>
-                - Perform the Swap: Enter the amount of BNB you want to exchange
-                for Weegle and confirm the transaction. Check all details
-                carefully and approve the swap through your wallet.
-              </p>
-            </div>{" "}
-            <div className=" font-proxima max-w-[444px] text-[14px] lg:text-[16px] font-[500]">
-              <p
-                className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]"
-                style={{
-                  textShadow:
-                    "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-                }}
-              >
-                STEP 5:
-              </p>
-              <p>Add WEEGLE to Your Wallet</p>
-
-              <p className=" ">
-                - Manually Add Weegle: After purchasing, you may need to add
-                Weegle to your wallet. In MetaMask or Trust Wallet, go to
-                &apos;Add Token,&apos; select &apos;Custom Token,&apos; and
-                input the Weegle contract address.
-              </p>
+                  STEP 5:
+                </p>
+                <p>
+                  Connect your wallet, and ensure you&apos;re on the Binance
+                  chain
+                </p>
+              </div>
+              <div>
+                <p
+                  className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]"
+                  style={{
+                    textShadow:
+                      "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
+                  }}
+                >
+                  STEP 6:
+                </p>
+                <p>
+                  At the top we have BNB. at the bottom we select token we want
+                  to buy
+                </p>
+              </div>
+              <div>
+                <p
+                  className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]"
+                  style={{
+                    textShadow:
+                      "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
+                  }}
+                >
+                  STEP 7:
+                </p>
+                <p>
+                  Get the contract address of the WEBBLE token and paste on
+                  select token beneath
+                </p>
+              </div>
+              <div>
+                <p
+                  className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]"
+                  style={{
+                    textShadow:
+                      "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
+                  }}
+                >
+                  STEP 8:
+                </p>
+                <p>
+                  Trade (if transaction doesn&apos;t go through, increase
+                  slippage if needed)
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="   ">
+        <div className=" mx-[10px]  2xl:mx-40  mt-[20px]">
           <div className=" py-[40px] flex items-center justify-center animate-bounce">
             <img src={BuyButton} alt="" />
           </div>
 
           <div className=" py-[20px]" id="tokenomics">
-            <p
-              className="font-bright animate-pulse text-[#FCCE06] font-[700] text-[30px] md:text-[50px] lg:text-[70px]"
-              style={{
-                textShadow:
-                  "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-              }}
-            >
+            <p className="font-bright animate-pulse text-[#FCCE06] font-[700] text-[30px] md:text-[50px] lg:text-[70px]">
               TOKENOMICS
             </p>
           </div>
 
-          <div className=" font-proxima font-[500] grid mx-[10px] md:mx-0 md:grid-cols-2 items-start md:place-items-center gap-[10px] text-left lg:grid-cols-3">
+          <div className=" font-proxima font-[500] grid mx-[10px] md:mx-0 md:grid-cols-2 items-start  gap-[10px] text-left lg:grid-cols-3">
             <div className="  ">
               <div className=" flex items-center gap-[10px] ">
                 <img src={icon1} alt="" className=" w-[30px] h-[30px]" />
@@ -459,9 +417,10 @@ const LandingPage = () => {
                 </p>
               </div>
               <div className="py-[10px] text-[14px] 2xl:text-[16px]">
-                <p>870,585,147 $WEEGLE</p>
+                <p>4,444,444,444 $WEEGLE</p>
                 <p>Stealth Launch</p>
-                <p>Zero Allocations </p>
+                <p>Zero % Team Allocations</p>
+                <p>10% Airdrop to Binance Community </p>
                 <p> Zero Presale </p>
                 <p>Zero Taxes </p>
                 <p>Auto TBM</p>
@@ -481,12 +440,12 @@ const LandingPage = () => {
                 </p>
               </div>
               <div className="py-[10px] text-[14px] 2xl:text-[16px]">
-                <p>Max Supply: 4,690,000,000</p>
-                <p>Total Supply: 4,690,000,000</p>
-                <p>Circulating at Launch: 4,690,000,000 </p>
+                <p>Max Supply:4,444,444,444</p>
+                <p>⁠Total Supply:4,444,444,444</p>
+                <p>Circulating Supply at Launch: 4,444,444,444 </p>
                 <p> Contract Revoked/Renounced </p>
-                <p>Liquidity Locked for 4.6 Years</p>
-                <p>Anti Whale: Less that 1% Post-launch</p>
+                <p>Liqiudity Locked for 8.7 years</p>
+                <p>Anti Whale : less than 1% post-launch</p>
               </div>
             </div>
             <div className=" ">
@@ -504,12 +463,8 @@ const LandingPage = () => {
               </div>
               <div className=" py-[10px]">
                 <p className=" ">
-                  Token Burn Mechanism (TBM): Weegle to Burn Rate: 1% after
-                  every 10,000,000,000 Wiggles until Deployment wallet it Empty
-                </p>
-                <p className=" pt-[10px]">
-                  The Token Burn Mechanics is designed to give the token holders
-                  the power to decide the value of WEEGLE.
+                  Token Burn Mechanism – TBM : WEEGLE to Burn Burn Rate : 1 % af
+                  until Deployment wallet is Empty
                 </p>
               </div>
             </div>
@@ -565,7 +520,7 @@ const LandingPage = () => {
               <p className=" text-justify text-[16px] lg:text-[20px]">
                 <span className="text-[#FFC700]"> $WEEGLE </span> is a community
                 Crypto coin with no intrinsic value or promise of financial
-                return. There is not formal team or roadmap
+                return. There is no formal team or roadmap
               </p>
             </div>
           </div>
