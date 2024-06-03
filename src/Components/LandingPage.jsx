@@ -242,7 +242,7 @@ const LandingPage = () => {
               <img src={checkIcon} alt="Check icon" className="" />
               <p className=" text-justify">
                 The mission of <span className="text-[#FCCE06]">WEEGLE</span>{" "}
-                memcoin is to fun fully dance{" "}
+                memecoin is to funfully dance{" "}
                 <span className="text-[#FCCE06]">‘Binance’</span> meme culture
                 back into popularity.
               </p>
@@ -368,7 +368,7 @@ const LandingPage = () => {
                   STEP 7:
                 </p>
                 <p>
-                  Get the contract address of the WEBBLE token and paste on
+                  Get the contract address of the $WEEGLE token and paste on
                   select token beneath
                 </p>
               </div>
@@ -397,7 +397,7 @@ const LandingPage = () => {
           </div>
 
           <div className=" py-[20px]" id="tokenomics">
-            <p className="font-bright animate-pulse text-[#FCCE06] font-[700] text-[30px] md:text-[50px] lg:text-[70px]">
+            <p className="font-bright  text-[#FCCE06] font-[700] text-[30px] md:text-[50px] lg:text-[70px]">
               TOKENOMICS
             </p>
           </div>
@@ -420,7 +420,8 @@ const LandingPage = () => {
                 <p>4,444,444,444 $WEEGLE</p>
                 <p>Stealth Launch</p>
                 <p>Zero % Team Allocations</p>
-                <p>10% Airdrop to Binance Community </p>
+                <p>5% Airdrop to Binance Community </p>
+                <p>5% Airdrop to Weegle to earn players </p>
                 <p> Zero Presale </p>
                 <p>Zero Taxes </p>
                 <p>Auto TBM</p>
@@ -444,8 +445,8 @@ const LandingPage = () => {
                 <p>⁠Total Supply:4,444,444,444</p>
                 <p>Circulating Supply at Launch: 4,444,444,444 </p>
                 <p> Contract Revoked/Renounced </p>
-                <p>Liqiudity Locked for 8.7 years</p>
-                <p>Anti Whale : less than 1% post-launch</p>
+                <p>Liqiudity Locked for 4 years</p>
+                <p>Anti Whale: less than 1% post-launch</p>
               </div>
             </div>
             <div className=" ">
@@ -458,13 +459,13 @@ const LandingPage = () => {
                       "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
                   }}
                 >
-                  TOKEN BURN MECHS (TBM)
+                  TOKEN BURN MECHS
                 </p>
               </div>
               <div className=" py-[10px]">
                 <p className=" ">
-                  Token Burn Mechanism – TBM : WEEGLE to Burn Burn Rate : 1 % af
-                  until Deployment wallet is Empty
+                  Auto Burn Mechanism – ABM Rate: 1% until Deployment wallet is
+                  Empty
                 </p>
               </div>
             </div>
@@ -492,13 +493,8 @@ const LandingPage = () => {
                 <img src={WeegleGIF} alt="" />
                 <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
               </div>
-              <p
-                className="font-bright text-[#FCCE06] font-[700] text-[18px] md:text-[25px] lg:text-[35px] py-[10px]"
-                style={{
-                  textShadow:
-                    "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-                }}
-              >
+              {/* <p className="font-bright text-[#FCCE06] font-[700] text-[18px] md:text-[25px] lg:text-[35px] py-[10px]"></p> */}
+              <p className=" font-bright text-[30px] lg:text-[70px] font-[700] text-[#FCCE06]">
                 DISCLAIMER
               </p>
             </div>
@@ -520,7 +516,8 @@ const LandingPage = () => {
               <p className=" text-justify text-[16px] lg:text-[20px]">
                 <span className="text-[#FFC700]"> $WEEGLE </span> is a community
                 Crypto coin with no intrinsic value or promise of financial
-                return. There is no formal team or roadmap
+                return. There is no formal team or roadmap. The crypto project
+                is for entertainment purposes only.
               </p>
             </div>
           </div>
