@@ -170,10 +170,10 @@ const LandingPage = () => {
         className=" mx-[10px]  2xl:mx-40  grid gap-[30px] items-center place-items-center"
         data-aos="fade-up"
       >
-        <p className=" font-bright text-[30px] lg:text-[70px] font-[700] text-[#FCCE06]">
+        <p className=" font-bright text-[30px] lg:text-[70px] font-[600] text-[#FCCE06]">
           ABOUT
         </p>
-        <p className=" text-justify text-[18px] lg:text-[30px] font-[600] font-proxima">
+        <p className=" text-justify text-[18px] lg:text-[30px]  font-proxima">
           The <span className=" text-[#FCCE06]">$WEEGLE</span> memecoin was born
           out of the imperative need to showcase the resilient nature of
           <span className=" text-[#FCCE06]"> Binance</span>. A case that can be
@@ -460,7 +460,6 @@ const LandingPage = () => {
                 <img src={WeegleGIF} alt="" />
                 <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
               </div>
-              {/* <p className="font-bright text-[#FCCE06] font-[700] text-[18px] md:text-[25px] lg:text-[35px] py-[10px]"></p> */}
               <p className=" font-bright text-[30px] lg:text-[70px] font-[700] text-[#FCCE06]">
                 DISCLAIMER
               </p>
