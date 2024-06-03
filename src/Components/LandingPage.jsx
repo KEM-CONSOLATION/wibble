@@ -19,7 +19,6 @@ import { RiArrowUpDoubleLine } from "react-icons/ri";
 const LandingPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  // const [audioPromptVisible, setAudioPromptVisible] = useState(false);
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -43,40 +42,8 @@ const LandingPage = () => {
     };
   }, []);
 
-  // useEffect(() => {
-  //   const audio = document.getElementById("weegle-audio");
-  //   audio.play().catch(() => {
-  //     setAudioPromptVisible(true);
-  //   });
-  // }, []);
-  // const handlePlayAudio = () => {
-  //   const audio = document.getElementById("weegle-audio");
-  //   audio
-  //     .play()
-  //     .then(() => {
-  //       setAudioPromptVisible(false);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Failed to play audio:", error);
-  //     });
-  // };
   return (
     <div className=" max-w-[1920px] 2xl:mx-auto lg:mx-[40px] mx-[10px] mt-[10px] relative text-white">
-      {/* <audio id="weegle-audio" src={Audio} loop autoPlay /> */}
-      {/* {audioPromptVisible && (
-        <div className=" z-20 fixed top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white p-4 rounded-md shadow-lg text-center">
-          <p>
-            Please click the button below to enable sound for the best
-            experience.
-          </p>
-          <button
-            onClick={handlePlayAudio}
-            className="bg-yellow-500 text-black px-4 py-2 mt-2 rounded-md"
-          >
-            Enable Sound
-          </button>
-        </div>
-      )} */}
       <div className=" flex items-center justify-between">
         <div className=" flex items-center justify-start md:hidden">
           <div className=" lg:hidden block max-w-[40px] relative">
@@ -237,7 +204,7 @@ const LandingPage = () => {
         </div>
 
         <div className="max-w-[935px] mx-auto my-[20px]">
-          <div className="grid gap-[20px] font-proxima text-[16px] md:text-[35px] font-[600]">
+          <div className="grid gap-[20px] font-proxima text-[18px] lg:text-[30px] font-[600]">
             <div className="flex items-start gap-[20px]">
               <img src={checkIcon} alt="Check icon" className="" />
               <p className=" text-justify">
@@ -391,7 +358,7 @@ const LandingPage = () => {
           </div>
         </div>
 
-        <div className=" mx-[10px]  2xl:mx-40  mt-[20px]">
+        <div className=" mx-[10px]  2xl:mx-[40px]  mt-[20px]">
           <div className=" py-[40px] flex items-center justify-center animate-bounce">
             <img src={BuyButton} alt="" />
           </div>
@@ -407,7 +374,7 @@ const LandingPage = () => {
               <div className=" flex items-center gap-[10px] ">
                 <img src={icon1} alt="" className=" w-[30px] h-[30px]" />
                 <p
-                  className="font-bright text-[#FCCE06] font-[700] text-[20px] 2xl:text-[28px]"
+                  className="font-bright text-[#FCCE06] font-[700]  text-[20px] lg:text-[35px]"
                   style={{
                     textShadow:
                       "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
@@ -416,7 +383,7 @@ const LandingPage = () => {
                   CONFIGURATION
                 </p>
               </div>
-              <div className="py-[10px] text-[14px] 2xl:text-[16px]">
+              <div className="py-[10px] text-[18px] lg:text-[30px]">
                 <p>4,444,444,444 $WEEGLE</p>
                 <p>Stealth Launch</p>
                 <p>Zero % Team Allocations</p>
@@ -431,7 +398,7 @@ const LandingPage = () => {
               <div className=" flex items-center gap-[10px]">
                 <img src={rocket} alt="" className=" w-[30px] h-[30px]" />
                 <p
-                  className="font-bright text-[#FCCE06] font-[700] text-[20px]  2xl:text-[28px]"
+                  className="font-bright text-[#FCCE06] font-[700] text-[20px] lg:text-[35px]"
                   style={{
                     textShadow:
                       "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
@@ -440,7 +407,7 @@ const LandingPage = () => {
                   LAUNCHCANICS
                 </p>
               </div>
-              <div className="py-[10px] text-[14px] 2xl:text-[16px]">
+              <div className="py-[10px] text-[18px] lg:text-[30px]">
                 <p>Max Supply:4,444,444,444</p>
                 <p>⁠Total Supply:4,444,444,444</p>
                 <p>Circulating Supply at Launch: 4,444,444,444 </p>
@@ -453,7 +420,7 @@ const LandingPage = () => {
               <div className=" flex items-center gap-[10px]">
                 <img src={icon2} alt="" className=" w-[30px] h-[30px]" />
                 <p
-                  className="font-bright text-[#FCCE06] font-[700] text-[20px]  2xl:text-[28px]"
+                  className="font-bright text-[#FCCE06] font-[700] text-[20px] lg:text-[35px]"
                   style={{
                     textShadow:
                       "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
@@ -463,7 +430,7 @@ const LandingPage = () => {
                 </p>
               </div>
               <div className=" py-[10px]">
-                <p className=" ">
+                <p className=" text-[18px] lg:text-[30px]">
                   Auto Burn Mechanism – ABM Rate: 1% until Deployment wallet is
                   Empty
                 </p>
@@ -500,7 +467,7 @@ const LandingPage = () => {
             </div>
             <div className="flex items-start  gap-[20px]">
               <img src={checkIcon} alt="Check icon" className="" />
-              <p className=" text-justify text-[16px] lg:text-[20px]">
+              <p className=" text-justify text-[18px] lg:text-[30px]">
                 <span className="text-[#FFC700]"> $WEEGLE </span>is not part of
                 the <span className="text-[#FFC700]">Binance</span> website or
                 <span className="text-[#FFC700]"> Binance</span> Inc. This site
@@ -513,7 +480,7 @@ const LandingPage = () => {
 
             <div className="flex items-start  py-[10px] gap-[20px] ">
               <img src={checkIcon} alt="Check icon" className="" />
-              <p className=" text-justify text-[16px] lg:text-[20px]">
+              <p className=" text-justify text-[18px] lg:text-[30px]">
                 <span className="text-[#FFC700]"> $WEEGLE </span> is a community
                 Crypto coin with no intrinsic value or promise of financial
                 return. There is no formal team or roadmap. The crypto project
