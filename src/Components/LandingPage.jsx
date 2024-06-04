@@ -4,15 +4,15 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import BuyButton from "../assets/Buy_Weegle_Button.svg";
 import checkIcon from "../assets/checkIcon.svg";
-import DexScreener from "../assets/DexScreener.svg";
+import DexScreener from "../assets/DexScreener.png";
 import rocket from "../assets/ion_rocket-sharp.svg";
-import Coingeco from "../assets/Coingeco.svg";
-import CoincapMarket from "../assets/CoincapMarket.svg";
-import XIcon from "../assets/XIcon.svg";
-import Telegram from "../assets/Telegram.svg";
+import Coingeco from "../assets/Coingeco.png";
+import CoincapMarket from "../assets/CoincapMarket.png";
+import XIcon from "../assets/XIcon.png";
+import Telegram from "../assets/Telegram.png";
 import WeegleGIF from "../assets/WIGGLEEGG.gif";
 import icon1 from "../assets/icon1.svg";
-import icon2 from "../assets/icon2.svg";
+// import icon2 from "../assets/icon2.svg";
 import { Typewriter } from "react-simple-typewriter";
 import { RiArrowUpDoubleLine } from "react-icons/ri";
 
@@ -88,32 +88,13 @@ const LandingPage = () => {
         </div>
         <div className=" flex flex-col items-center">
           <p className=" hidden  mt-[10px] md:mt-0 md:flex items-center gap-[10px] text-white capitalize font-[700] text-[14px] md:text-[30px] font-bright lg:text-[40px]">
-            THE{" "}
-            <span
-              className=" text-[#FCCE06]"
-              style={{
-                textShadow:
-                  "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-              }}
-            >
-              {" "}
-              {""}BINANCE
-            </span>
+            THE <span className=" text-[#FCCE06]"> {""}BINANCE</span>
             WEEBLE WOBBLE C🐱T
           </p>
 
           <div className=" flex flex-col items-center justify-center md:hidden">
             <p className="  mt-[10px] text-white capitalize font-[700]  xxs:text-[12px] xs:text-[15px] sm:text-[28px] font-bright ">
-              THE{" "}
-              <span
-                className=" text-[#FCCE06]"
-                style={{
-                  textShadow:
-                    "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-                }}
-              >
-                BINANCE{" "}
-              </span>
+              THE <span className=" text-[#FCCE06]">BINANCE </span>
               WEEBLE WOBBLE C🐱T
             </p>
           </div>
@@ -369,7 +350,7 @@ const LandingPage = () => {
             </p>
           </div>
 
-          <div className=" font-proxima font-[500] grid mx-[10px] md:mx-0 md:grid-cols-2 items-start  gap-[10px] text-left lg:grid-cols-3">
+          <div className=" font-proxima font-[500] grid mx-[10px] md:mx-0 md:grid-cols-2 items-start  gap-[10px] text-left lg:grid-cols-2 place-items-center">
             <div className="  ">
               <div className=" flex items-center gap-[10px] ">
                 <img src={icon1} alt="" className=" w-[30px] h-[30px]" />
@@ -387,11 +368,11 @@ const LandingPage = () => {
                 <p>4,444,444,444 $WEEGLE</p>
                 <p>Stealth Launch</p>
                 <p>Zero % Team Allocations</p>
-                <p>5% Airdrop to Binance Community </p>
-                <p>5% Airdrop to Weegle to earn players </p>
+                <p>10% Airdrop to Binance Community </p>
+                {/* <p>5% Airdrop to Weegle to earn players </p> */}
                 <p> Zero Presale </p>
                 <p>Zero Taxes </p>
-                <p>Auto TBM</p>
+                {/* <p>Auto TBM</p> */}
               </div>
             </div>
             <div className=" ">
@@ -416,7 +397,7 @@ const LandingPage = () => {
                 <p>Anti Whale: less than 1% post-launch</p>
               </div>
             </div>
-            <div className=" ">
+            {/* <div className=" ">
               <div className=" flex items-center gap-[10px]">
                 <img src={icon2} alt="" className=" w-[30px] h-[30px]" />
                 <p
@@ -435,7 +416,7 @@ const LandingPage = () => {
                   Empty
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
