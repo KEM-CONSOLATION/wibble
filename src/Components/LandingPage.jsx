@@ -180,7 +180,7 @@ const LandingPage = () => {
       <div className=" text-center">
         <div className=" py-[20px]" id="weegles">
           <p className="font-bright text-[#FCCE06] font-[700] text-[30px] md:text-[50px] lg:text-[70px]">
-            MISSION + ROADMAP
+            MISSION TO:
           </p>
         </div>
 
@@ -368,7 +368,7 @@ const LandingPage = () => {
                 <p>4,444,444,444 $WEEGLE</p>
                 <p>Stealth Launch</p>
                 <p>Zero % Team Allocations</p>
-                <p>10% Airdrop to Binance Community </p>
+                <p>4.44% Airdrop to Binance Community </p>
                 {/* <p>5% Airdrop to Weegle to earn players </p> */}
                 <p> Zero Presale </p>
                 <p>Zero Taxes </p>
@@ -394,7 +394,7 @@ const LandingPage = () => {
                 <p>Circulating Supply at Launch: 4,444,444,444 </p>
                 <p> Contract Revoked/Renounced </p>
                 <p>Liqiudity Locked for 4 years</p>
-                <p>Anti Whale: less than 1% post-launch</p>
+                {/* <p>Anti Whale: less than 1% post-launch</p> */}
               </div>
             </div>
             {/* <div className=" ">
@@ -425,7 +425,7 @@ const LandingPage = () => {
             <img src={BuyButton} alt="" />
           </div>
 
-          <div className=" flex items-center justify-between md:justify-center md:gap-[60px]">
+          <div className=" flex items-center gap-[10px] justify-center md:gap-[60px]">
             <img src={XIcon} alt="" className=" w-[40px] h-[40px]" />
             <img src={Telegram} alt="" className=" w-[40px] h-[40px]" />
             <img src={CoincapMarket} alt="" className=" w-[40px] h-[40px]" />
