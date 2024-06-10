@@ -180,7 +180,7 @@ const LandingPage = () => {
       <div className=" text-center">
         <div className=" py-[20px]" id="weegles">
           <p className="font-bright text-[#FCCE06] font-[700] text-[30px] md:text-[50px] lg:text-[70px]">
-            MISSION TO:
+            MISSION
           </p>
         </div>
 
@@ -463,7 +463,7 @@ const LandingPage = () => {
               <p className=" text-justify text-[18px] lg:text-[30px]">
                 <span className="text-[#FFC700]"> $WEEGLE </span> is a community
                 Crypto coin with no intrinsic value or promise of financial
-                return. There is no formal team or roadmap. The crypto project
+                return. There is no formal team. The crypto project
                 is for entertainment purposes only.
               </p>
             </div>
