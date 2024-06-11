@@ -52,13 +52,7 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="md:hidden block text-[#FCCE06] " data-aos="fade-up">
-          <p
-            className="font-bright text-[#FCCE06] font-[700] text-[40px] sm:text-[90px]"
-            style={{
-              textShadow:
-                "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-            }}
-          >
+          <p className="font-bright text-[#FCCE06] font-[700] text-[40px] sm:text-[90px]">
             <Typewriter
               words={["WEEGLE"]}
               loop={0}
@@ -122,10 +116,6 @@ const LandingPage = () => {
             <p
               className="font-bright text-[#FCCE06] font-[700] text-[50px]
               md:text-[50px] lg:text-[180px]"
-              style={{
-                textShadow:
-                  "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-              }}
             >
               <Typewriter
                 words={["WEEGLE"]}
@@ -220,49 +210,25 @@ const LandingPage = () => {
           <div className="flex justify-center items-center ">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[40px] text-center font-proxima text-[18px] lg:text-[30px] mx-[10px] md:mx-0">
               <div>
-                <p
-                  className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]"
-                  style={{
-                    textShadow:
-                      "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-                  }}
-                >
+                <p className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]">
                   STEP 1:
                 </p>
                 <p>Download Trust Wallet and Set up</p>
               </div>
               <div>
-                <p
-                  className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]"
-                  style={{
-                    textShadow:
-                      "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-                  }}
-                >
+                <p className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]">
                   STEP 2:
                 </p>
                 <p>Fund Your Wallet with BNB</p>
               </div>
               <div>
-                <p
-                  className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]"
-                  style={{
-                    textShadow:
-                      "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-                  }}
-                >
+                <p className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]">
                   STEP 3:
                 </p>
                 <p>Once wallet is funded, tap on the in-App browser</p>
               </div>
               <div>
-                <p
-                  className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]"
-                  style={{
-                    textShadow:
-                      "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-                  }}
-                >
+                <p className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]">
                   STEP 4:
                 </p>
                 <p>
@@ -276,13 +242,7 @@ const LandingPage = () => {
                 </p>
               </div>
               <div>
-                <p
-                  className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]"
-                  style={{
-                    textShadow:
-                      "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-                  }}
-                >
+                <p className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]">
                   STEP 5:
                 </p>
                 <p>
@@ -291,13 +251,7 @@ const LandingPage = () => {
                 </p>
               </div>
               <div>
-                <p
-                  className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]"
-                  style={{
-                    textShadow:
-                      "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-                  }}
-                >
+                <p className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]">
                   STEP 6:
                 </p>
                 <p>
@@ -306,13 +260,7 @@ const LandingPage = () => {
                 </p>
               </div>
               <div>
-                <p
-                  className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]"
-                  style={{
-                    textShadow:
-                      "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-                  }}
-                >
+                <p className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]">
                   STEP 7:
                 </p>
                 <p>
@@ -321,13 +269,7 @@ const LandingPage = () => {
                 </p>
               </div>
               <div>
-                <p
-                  className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]"
-                  style={{
-                    textShadow:
-                      "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-                  }}
-                >
+                <p className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[28px] lg:text-[35px]">
                   STEP 8:
                 </p>
                 <p>
@@ -354,13 +296,7 @@ const LandingPage = () => {
             <div className="  ">
               <div className=" flex items-center gap-[10px] ">
                 <img src={icon1} alt="" className=" w-[30px] h-[30px]" />
-                <p
-                  className="font-bright text-[#FCCE06] font-[700]  text-[20px] lg:text-[35px]"
-                  style={{
-                    textShadow:
-                      "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-                  }}
-                >
+                <p className="font-bright text-[#FCCE06] font-[700]  text-[20px] lg:text-[35px]">
                   CONFIGURATION
                 </p>
               </div>
@@ -378,13 +314,7 @@ const LandingPage = () => {
             <div className=" ">
               <div className=" flex items-center gap-[10px]">
                 <img src={rocket} alt="" className=" w-[30px] h-[30px]" />
-                <p
-                  className="font-bright text-[#FCCE06] font-[700] text-[20px] lg:text-[35px]"
-                  style={{
-                    textShadow:
-                      "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-                  }}
-                >
+                <p className="font-bright text-[#FCCE06] font-[700] text-[20px] lg:text-[35px]">
                   LAUNCHCANICS
                 </p>
               </div>
@@ -394,29 +324,8 @@ const LandingPage = () => {
                 <p>Circulating Supply at Launch: 4,444,444,444 </p>
                 <p> Contract Revoked/Renounced </p>
                 <p>Liqiudity Locked for 4 years</p>
-                {/* <p>Anti Whale: less than 1% post-launch</p> */}
               </div>
             </div>
-            {/* <div className=" ">
-              <div className=" flex items-center gap-[10px]">
-                <img src={icon2} alt="" className=" w-[30px] h-[30px]" />
-                <p
-                  className="font-bright text-[#FCCE06] font-[700] text-[20px] lg:text-[35px]"
-                  style={{
-                    textShadow:
-                      "0 0 20px rgba(252, 206, 6, 0.8), 0 0 30px rgba(252, 206, 6, 0.6), 0 0 40px rgba(252, 206, 6, 0.4)",
-                  }}
-                >
-                  TOKEN BURN MECHS
-                </p>
-              </div>
-              <div className=" py-[10px]">
-                <p className=" text-[18px] lg:text-[30px]">
-                  Auto Burn Mechanism – ABM Rate: 1% until Deployment wallet is
-                  Empty
-                </p>
-              </div>
-            </div> */}
           </div>
         </div>
 
@@ -463,8 +372,8 @@ const LandingPage = () => {
               <p className=" text-justify text-[18px] lg:text-[30px]">
                 <span className="text-[#FFC700]"> $WEEGLE </span> is a community
                 Crypto coin with no intrinsic value or promise of financial
-                return. There is no formal team. The crypto project
-                is for entertainment purposes only.
+                return. There is no formal team. The crypto project is for
+                entertainment purposes only.
               </p>
             </div>
           </div>
