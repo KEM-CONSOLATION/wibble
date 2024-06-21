@@ -292,7 +292,7 @@ const LandingPage = () => {
             </p>
           </div>
 
-          <div className=" font-proxima font-[500] grid mx-[10px] md:mx-0 md:grid-cols-2 items-start  gap-[10px] text-left lg:grid-cols-2 place-items-center">
+          <div className=" font-proxima font-[500] grid  md:grid-cols-2 items-start  gap-[10px] text-left lg:grid-cols-2 ">
             <div className="  ">
               <div className=" flex items-center gap-[10px] ">
                 <img src={icon1} alt="" className=" w-[30px] h-[30px]" />
@@ -305,10 +305,8 @@ const LandingPage = () => {
                 <p>Stealth Launch</p>
                 <p>Zero % Team Allocations</p>
                 <p>4.44% Airdrop to Binance Community </p>
-                {/* <p>5% Airdrop to Weegle to earn players </p> */}
                 <p> Zero Presale </p>
                 <p>Zero Taxes </p>
-                {/* <p>Auto TBM</p> */}
               </div>
             </div>
             <div className=" ">
@@ -383,7 +381,7 @@ const LandingPage = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-4 right-4 bg-[#ffffff] text-[#2F160B] px-4 py-4 rounded-full shadow-lg hover:bg-[#47240E] hover:text-white transition-all duration-300 animate-bounce hover:animate-none"
+          className="fixed bottom-4 right-4 bg-[#FCCE06] text-[#2F160B] px-4 py-4 rounded-full shadow-lg hover:bg-[#47240E] hover:text-white transition-all duration-300 animate-bounce hover:animate-none"
         >
           <RiArrowUpDoubleLine className="text-2xl" />
         </button>
