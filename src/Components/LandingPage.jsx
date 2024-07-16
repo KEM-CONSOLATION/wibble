@@ -215,9 +215,10 @@ const LandingPage = () => {
                 <p>4,444,444,444 $WEEGLE</p>
                 <p>Stealth Launch</p>
                 <p>Zero % Team Allocations</p>
-                <p>4.44% Airdrop to Binance Community </p>
-                <p> Zero Presale </p>
+                <p>Zero Presale </p>
                 <p>Zero Taxes </p>
+                <p>Anti Bot</p>
+                <p>Anti Whale (1.1% Max wallet, 1% Max Transaction limit) </p>
               </div>
             </div>
             <div className=" ">
@@ -231,7 +232,6 @@ const LandingPage = () => {
                 <p>Max Supply:4,444,444,444</p>
                 <p>⁠Total Supply:4,444,444,444</p>
                 <p>Circulating Supply at Launch: 4,444,444,444 </p>
-                <p> Contract Revoked/Renounced </p>
                 <p>Liqiudity Locked for 4 years</p>
               </div>
             </div>
