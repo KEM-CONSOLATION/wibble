@@ -74,9 +74,7 @@ const Navbar = () => {
                 {" "}
                 <a href="/#buy">HOW TO BUY</a>{" "}
               </p>
-              <p className=" hover:text-white">
-                <a href="/#weegles">WEEGLES</a>
-              </p>
+
               <Link to="/experiment1">
                 <p className=" hover:text-white">EXPERIMENT 1.</p>
               </Link>
