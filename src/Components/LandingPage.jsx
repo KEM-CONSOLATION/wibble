@@ -75,7 +75,12 @@ const LandingPage = () => {
       </div>
 
       <div className=" animate-bounce py-[40px] flex items-center justify-center">
-        <img src={BuyButton} alt="" />
+        <a
+          href="https://pancakeswap.finance/swap?outputCurrency=0xd06CA2caA7Ee6B98E37BcF965244324760bFF286"
+          target="blank"
+        >
+          <img src={BuyButton} alt="" />
+        </a>
       </div>
 
       <div className=" text-center">
@@ -109,7 +114,12 @@ const LandingPage = () => {
 
         <div className="    mx-[10px]  2xl:mx-40">
           <div className=" py-[40px] flex items-center justify-center animate-bounce">
-            <img src={BuyButton} alt="" />
+            <a
+              href="https://pancakeswap.finance/swap?outputCurrency=0xd06CA2caA7Ee6B98E37BcF965244324760bFF286"
+              target="blank"
+            >
+              <img src={BuyButton} alt="" />
+            </a>
           </div>
 
           <div className=" py-[20px]" id="buy">
@@ -194,7 +204,12 @@ const LandingPage = () => {
 
         <div className=" mx-[10px]  2xl:mx-[40px]  mt-[20px]">
           <div className=" py-[40px] flex items-center justify-center animate-bounce">
-            <img src={BuyButton} alt="" />
+            <a
+              href="https://pancakeswap.finance/swap?outputCurrency=0xd06CA2caA7Ee6B98E37BcF965244324760bFF286"
+              target="blank"
+            >
+              <img src={BuyButton} alt="" />
+            </a>
           </div>
 
           <div className=" py-[20px]" id="tokenomics">
@@ -240,7 +255,12 @@ const LandingPage = () => {
 
         <div className="">
           <div className=" py-[40px] flex items-center justify-center animate-bounce">
-            <img src={BuyButton} alt="" />
+            <a
+              href="https://pancakeswap.finance/swap?outputCurrency=0xd06CA2caA7Ee6B98E37BcF965244324760bFF286"
+              target="blank"
+            >
+              <img src={BuyButton} alt="" />
+            </a>
           </div>
 
           <div className=" flex items-center gap-[10px] justify-center md:gap-[60px]">
