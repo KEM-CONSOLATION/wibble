@@ -203,7 +203,7 @@ const LandingPage = () => {
             </p>
           </div>
 
-          <div className=" font-proxima font-[500] grid  md:grid-cols-2 items-start  gap-[10px] text-left lg:grid-cols-2 ">
+          <div className=" font-proxima font-[500] grid  md:grid-cols-2 items-start  gap-[10px] text-left lg:grid-cols-2 place-items-center">
             <div className="  ">
               <div className=" flex items-center gap-[10px] ">
                 <img src={icon1} alt="" className=" w-[30px] h-[30px]" />
