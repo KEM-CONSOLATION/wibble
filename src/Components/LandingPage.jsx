@@ -218,7 +218,6 @@ const LandingPage = () => {
                 <p>Zero Presale </p>
                 <p>Zero Taxes </p>
                 <p>Anti Bot</p>
-                <p>Anti Whale (1.1% Max wallet, 1% Max Transaction limit) </p>
               </div>
             </div>
             <div className=" ">
@@ -231,8 +230,9 @@ const LandingPage = () => {
               <div className="py-[10px] text-[18px] lg:text-[30px]">
                 <p>Max Supply:4,444,444,444</p>
                 <p>⁠Total Supply:4,444,444,444</p>
-                <p>Circulating Supply at Launch: 4,444,444,444 </p>
+                <p>Airdrop 4.4% to Binance Community </p>
                 <p>Liqiudity Locked for 4 years</p>
+                <p>Anti Whale (1.1% Max wallet, 1% Max Transaction limit) </p>
               </div>
             </div>
           </div>
