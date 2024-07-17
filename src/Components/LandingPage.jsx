@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import BuyButton from "../assets/Buy_Weegle_Button.svg";
@@ -16,6 +15,8 @@ import { RiArrowUpDoubleLine } from "react-icons/ri";
 import Navbar from "./Navbar";
 
 const LandingPage = () => {
+  const [copied, setCopied] = useState(false);
+  const textToCopy = "0xd06CA2caA7Ee6B98E37BcF965244324760bFF286";
   const [isVisible, setIsVisible] = useState(false);
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -27,6 +28,28 @@ const LandingPage = () => {
     } else {
       setIsVisible(false);
     }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisibility);
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+    return () => {
+      window.removeEventListener("scroll", toggleVisibility);
+    };
+  }, []);
+
+  const handleCopy = () => {
+    navigator.clipboard
+      .writeText(textToCopy)
+      .then(() => {
+        setCopied(true);
+      })
+      .catch((err) => {
+        console.error("Failed to copy text: ", err);
+      });
   };
 
   useEffect(() => {
@@ -109,6 +132,33 @@ const LandingPage = () => {
                 the moon
               </p>
             </div>
+          </div>
+        </div>
+
+        <div
+          className="max-w-6xl mx-[10px] my-20 lg:mx-auto "
+          data-aos="fade-up"
+        >
+          <p className=" font-bright text-[20px] md:text-[30px] font-[700] text-[#FCCE06]">
+            CONTRACT ADDRESS
+          </p>
+
+          <div className="text-center font-[600] font-Inter text-white ">
+            <div className="">
+              <p className="mb-[20px] text-[20px] lowercase  overflow-x-auto">
+                {textToCopy}
+              </p>
+            </div>
+            <p
+              className="bg-[#FCCE06] text-black px-[26px] inline rounded-[5px] py-[10px] text-[20px] cursor-pointer"
+              onClick={handleCopy}
+            >
+              Copy
+            </p>
+
+            <p className=" font-[400] text-[14px] mt-[30px] italic">
+              {copied && "Contract Address has been Copied to clipboard"}
+            </p>
           </div>
         </div>
 
@@ -218,7 +268,7 @@ const LandingPage = () => {
             </p>
           </div>
 
-          <div className=" font-proxima font-[500] grid  md:grid-cols-2 items-start  gap-[10px] text-left lg:grid-cols-2 place-items-center">
+          <div className=" font-proxima font-[500] grid  md:grid-cols-2 items-start  gap-[10px] text-left lg:grid-cols-2 md:place-items-center">
             <div className="  ">
               <div className=" flex items-center gap-[10px] ">
                 <img src={icon1} alt="" className=" w-[30px] h-[30px]" />
