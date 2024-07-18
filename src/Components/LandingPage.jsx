@@ -16,7 +16,10 @@ import Navbar from "./Navbar";
 
 const LandingPage = () => {
   const [copied, setCopied] = useState(false);
+  const [copied2, setCopied2] = useState(false);
   const textToCopy = "0xd06CA2caA7Ee6B98E37BcF965244324760bFF286";
+  const textToCopy2 =
+    "0x164f9200678d21deef16b89f231d8efdff5550a39f2ca4625687dfb93ff271e7";
   const [isVisible, setIsVisible] = useState(false);
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -46,6 +49,17 @@ const LandingPage = () => {
       .writeText(textToCopy)
       .then(() => {
         setCopied(true);
+      })
+      .catch((err) => {
+        console.error("Failed to copy text: ", err);
+      });
+  };
+
+  const handleCopy2 = () => {
+    navigator.clipboard
+      .writeText(textToCopy2)
+      .then(() => {
+        setCopied2(true);
       })
       .catch((err) => {
         console.error("Failed to copy text: ", err);
@@ -158,6 +172,33 @@ const LandingPage = () => {
 
             <p className=" font-[400] text-[14px] mt-[30px] italic">
               {copied && "Contract Address has been Copied to clipboard"}
+            </p>
+          </div>
+        </div>
+
+        <div
+          className="max-w-6xl mx-[10px] my-20 lg:mx-auto "
+          data-aos="fade-up"
+        >
+          <p className=" font-bright text-[20px] md:text-[30px] font-[700] text-[#FCCE06] uppercase">
+            transaction Hash for Renounced Contract Ownership
+          </p>
+
+          <div className="text-center font-[600] font-Inter text-white ">
+            <div className="">
+              <p className="mb-[20px] text-[20px] lowercase  overflow-x-auto">
+                {textToCopy2}
+              </p>
+            </div>
+            <p
+              className="bg-[#FCCE06] text-black px-[26px] inline rounded-[5px] py-[10px] text-[20px] cursor-pointer"
+              onClick={handleCopy2}
+            >
+              Copy
+            </p>
+
+            <p className=" font-[400] text-[14px] mt-[30px] italic">
+              {copied2 && "Hash has been Copied to clipboard"}
             </p>
           </div>
         </div>
@@ -294,7 +335,7 @@ const LandingPage = () => {
               </div>
               <div className="py-[10px] text-[18px] lg:text-[30px]">
                 <p>Max Supply:4,444,444,444</p>
-                <p>⁠Total Supply:4,444,444,444</p>
+                <p>Total Supply:4,444,444,444</p>
                 <p>Airdrop 4.4% to Binance Community </p>
                 <p>Liqiudity Locked for 4 years</p>
                 <p>Anti Whale (1.1% Max wallet, 1% Max Transaction limit) </p>
@@ -314,8 +355,12 @@ const LandingPage = () => {
           </div>
 
           <div className=" flex items-center gap-[10px] justify-center md:gap-[60px]">
-            <img src={XIcon} alt="" className=" w-[40px] h-[40px]" />
-            <img src={Telegram} alt="" className=" w-[40px] h-[40px]" />
+            <a href="https://x.com/weeglebnb" target="blank">
+              <img src={XIcon} alt="" className=" w-[40px] h-[40px]" />
+            </a>
+            <a href="https://t.me/weegleCAT" target="blank">
+              <img src={Telegram} alt="" className=" w-[40px] h-[40px]" />
+            </a>
             <img src={CoincapMarket} alt="" className=" w-[40px] h-[40px]" />
             <img src={Coingeco} alt="" className=" w-[40px] h-[40px]" />
             <img src={DexScreener} alt="" className=" w-[40px] h-[40px]" />
