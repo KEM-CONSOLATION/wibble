@@ -92,23 +92,55 @@ const LandingPage = () => {
         <p className=" font-bright text-[30px] lg:text-[70px] font-[600] text-[#FCCE06]">
           ABOUT
         </p>
-        <p className=" text-justify text-[18px] lg:text-[30px]  font-proxima">
-          The <span className=" text-[#FCCE06]">$WEEGLE</span> memecoin was born
-          out of the imperative need to showcase the resilient nature of
-          <span className=" text-[#FCCE06]"> Binance</span>. A case that can be
-          likened to “a <span className=" text-[#FCCE06]">cat</span> with nine
-          (9) lives” Its no longer news that, no matter what is thrown at
-          Binance or her founder, the entity can only ‘Weeble Wobble , But They
-          Won’t Fall Down’
-        </p>
-        <p className="text-justify text-[18px] lg:text-[30px] font-[600] font-proxima">
-          {" "}
-          Extending beyond the <span className="text-[#FCCE06]">Binance </span>
-          story, <span className="text-[#FCCE06]">$WEEGLE</span> is now a
-          representative of the community&apos;s collective efforts to
-          supporting <span className=" text-[#FCCE06]">Binance </span> to keep
-          leading the Charge.
-        </p>
+
+        <div className=" text-center">
+          <p className="  font-bright text-[20px] lg:text-[30px] font-[600] text-[#FCCE06]">
+            The WEEGLE Cat Transition
+          </p>
+          <p className=" text-justify text-[18px] lg:text-[30px]  font-proxima ">
+            In the world of digital finance, resilience and adaptability are
+            paramount. Just as a{" "}
+            <span className=" text-[#FCCE06] font-[600]">cat</span> with (9)nine
+            lives embodies the spirit of enduring and thriving through
+            adversity, the{" "}
+            <span className=" text-[#FCCE06] font-[600]">WEEGLE X</span>{" "}
+            represents a new chapter in our journey, echoing the steadfast
+            nature of its predecessor.
+          </p>
+        </div>
+        <div className=" text-center">
+          <p className="  font-bright text-[20px] lg:text-[30px] font-[600] text-[#FCCE06]">
+            The Legacy of $WEEGLE
+          </p>
+          <p className=" text-justify text-[18px] lg:text-[30px]  font-proxima ">
+            Born out of the need to highlight Binance&apos;s unyielding
+            resilience,{" "}
+            <span className=" text-[#FCCE06] font-[600]">WEEGLE</span> was a
+            tribute to the platform&apos;s ability to &ldquo;
+            <span className=" text-[#FCCE06] font-[600]">Weeble Wobble</span>,
+            But Never Fall Down.&rdquo; The token&apos;s design was simple yet
+            powerful: no team allocations, no presale, and zero taxes. It was an
+            embodiment of a community rallying behind Binance, celebrating its
+            ability to weather any storm.
+          </p>
+        </div>
+
+        <div className=" text-center">
+          <p className="  font-bright text-[20px] lg:text-[30px] font-[600] text-[#FCCE06]">
+            Introducing WEEGLE X
+          </p>
+          <p className=" text-justify text-[18px] lg:text-[30px]  font-proxima ">
+            As we move forward, we’re excited to unveil the next evolution in
+            our journey:{" "}
+            <span className=" text-[#FCCE06] font-[600]">WEEGLE X</span>. Much
+            like the mythic cat with nine lives,{" "}
+            <span className=" text-[#FCCE06] font-[600]">WEEGLE X</span>{" "}
+            symbolizes the rebirth and continued resilience of our community and
+            ecosystem. Join us in this exciting chapter as we continue to
+            champion resilience and community spirit. Welcome to the future of
+            <span className=" text-[#FCCE06] font-[600]"> WEEGLE Cat X</span>
+          </p>
+        </div>
       </div>
 
       <div className=" animate-bounce py-[40px] flex items-center justify-center">
@@ -153,35 +185,8 @@ const LandingPage = () => {
           className="max-w-6xl mx-[10px] my-20 lg:mx-auto "
           data-aos="fade-up"
         >
-          <p className=" font-bright text-[20px] md:text-[30px] font-[700] text-[#FCCE06]">
-            CONTRACT ADDRESS
-          </p>
-
-          <div className="text-center font-[600] font-Inter text-white ">
-            <div className="">
-              <p className="mb-[20px] text-[20px] lowercase  overflow-x-auto">
-                {textToCopy}
-              </p>
-            </div>
-            <p
-              className="bg-[#FCCE06] text-black px-[26px] inline rounded-[5px] py-[10px] text-[20px] cursor-pointer"
-              onClick={handleCopy}
-            >
-              Copy
-            </p>
-
-            <p className=" font-[400] text-[14px] mt-[30px] italic">
-              {copied && "Contract Address has been Copied to clipboard"}
-            </p>
-          </div>
-        </div>
-
-        <div
-          className="max-w-6xl mx-[10px] my-20 lg:mx-auto "
-          data-aos="fade-up"
-        >
           <p className=" font-bright text-[20px] md:text-[30px] font-[700] text-[#FCCE06] uppercase">
-            transaction Hash for Renounced Contract Ownership
+            $WEEGLE X CONTRACT
           </p>
 
           <div className="text-center font-[600] font-Inter text-white ">
@@ -199,6 +204,33 @@ const LandingPage = () => {
 
             <p className=" font-[400] text-[14px] mt-[30px] italic">
               {copied2 && "Hash has been Copied to clipboard"}
+            </p>
+          </div>
+        </div>
+
+        <div
+          className="max-w-6xl mx-[10px] my-20 lg:mx-auto "
+          data-aos="fade-up"
+        >
+          <p className=" font-bright text-[20px] md:text-[30px] font-[700] text-[#FCCE06]">
+            OLD $WEEGLE CONTRACT
+          </p>
+
+          <div className="text-center font-[600] font-Inter text-white ">
+            <div className="">
+              <p className="mb-[20px] text-[20px] lowercase  overflow-x-auto">
+                {textToCopy}
+              </p>
+            </div>
+            <p
+              className="bg-[#FCCE06] text-black px-[26px] inline rounded-[5px] py-[10px] text-[20px] cursor-pointer"
+              onClick={handleCopy}
+            >
+              Copy
+            </p>
+
+            <p className=" font-[400] text-[14px] mt-[30px] italic">
+              {copied && "Contract Address has been Copied to clipboard"}
             </p>
           </div>
         </div>
