@@ -73,6 +73,14 @@ const FirstExperiment = () => {
         </video>
         <div className="absolute inset-0 bg-black bg-opacity-50 rounded-[20px] flex items-center justify-center"></div>
       </div>
+
+      <a href="http://weeglex.net/" target="blank">
+        <div className=" my-[20px] flex items-center justify-center">
+          <p className="  font-bright bg-[#FCCE06] text-black px-[26px] inline rounded-[5px] py-[10px] text-[20px] cursor-pointer">
+            Migrate Now
+          </p>
+        </div>
+      </a>
     </div>
   );
 };

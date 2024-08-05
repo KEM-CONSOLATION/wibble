@@ -11,10 +11,12 @@ const Navbar = () => {
     <div>
       <div className=" flex items-center justify-between">
         <div className=" flex items-center justify-start md:hidden">
-          <div className=" lg:hidden block max-w-[40px] relative">
-            <img src={WeegleGIF} alt="" />
-            <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
-          </div>
+          <Link to="/">
+            <div className=" lg:hidden block max-w-[40px] relative">
+              <img src={WeegleGIF} alt="" />
+              <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
+            </div>
+          </Link>
         </div>
         <div className="md:hidden block text-[#FCCE06] " data-aos="fade-up">
           <p className="font-bright text-[#FCCE06] font-[700] text-[40px] sm:text-[90px]">
@@ -41,10 +43,13 @@ const Navbar = () => {
         </div>
       </div>
       <div className=" grid items-center md:flex md:items-start md:justify-center place-items-center  gap-[10px]">
-        <div className=" hidden md:block max-w-[107px] relative">
-          <img src={WeegleGIF} alt="" />
-          <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
-        </div>
+        <Link to="/">
+          {" "}
+          <div className=" hidden md:block max-w-[107px] relative">
+            <img src={WeegleGIF} alt="" />
+            <div className="absolute inset-0 bg-transparent opacity-50 flex items-center justify-center"></div>
+          </div>
+        </Link>
         <div className=" flex flex-col items-center">
           <p className=" hidden  mt-[10px] md:mt-0 md:flex items-center gap-[10px] text-white capitalize font-[700] text-[14px] md:text-[30px] font-bright lg:text-[40px]">
             THE <span className=" text-[#FCCE06]"> {""}BINANCE</span>
