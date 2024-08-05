@@ -52,12 +52,12 @@ const SecondExperiment = () => {
           REVEALING...
         </p>
         <p className="font-bright text-[#FCCE06] font-[700] text-[20px] md:text-[26px]">
-          4TH SEPTEMBER 2024
+          4TH OCTOBER 2024
         </p>
       </div>
 
       <div className="mt-4">
-        <Countdown date={new Date("2024-09-04T00:00:00")} renderer={renderer} />
+        <Countdown date={new Date("2024-10-04T00:00:00")} renderer={renderer} />
       </div>
     </div>
   );

@@ -76,7 +76,7 @@ const Navbar = () => {
               </p>
 
               <Link to="/experiment1">
-                <p className=" hover:text-white">EXPERIMENT 1.</p>
+                <p className=" hover:text-white">WEEZAD</p>
               </Link>
               <Link to="/experiment2">
                 <p className=" hover:text-white">EXPERIMENT 2.</p>{" "}
